@@ -11,20 +11,11 @@
   --don-lichtblauw-200: #cce7f4;
 }
 
-section header {
+section {
   align-content: start !important;
   background-image: url("https://dvh.github.io/slideshows/themes/header.svg");
-  width: 100%;
-  padding: 0;
   background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 90px;
-  content: "";
-  color: white;
 }
-
 
 h2 {
   padding-top: 10px;
