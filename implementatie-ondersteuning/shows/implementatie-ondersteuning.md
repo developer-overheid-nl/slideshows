@@ -181,6 +181,71 @@ sequenceDiagram
 
 ---
 
+## Dus, wat nu? Is dit alleen een softwareprobleem? 
+
+Nee! het is en een softwareding, *en* een regel en wetgeving ding.
+
+* De bio
+* Pas toe en leg uit
+* Nis2
+* CRA
+
+---
+
+## Tooling voor verschillende doelen
+
+* Code
+* Platform
+* Security speifiek
+  
+Idealiter doorlopend en continue.
+
+---
+
+## Code Testing
+
+Reviews / conformity
+
+* Unit tests
+* Linting
+* Code coverage
+* Code smells
+* Api-design rules validator
+* QualityTime
+* Jenkins
+
+---
+
+## Platform / hosting
+
+Code is vaak 'kaal' hosting voegt laagjes toe die cruciaal zijn voor security.
+
+* Itnernet.nl
+* Openkat.nl
+* ssltest
+
+---
+
+## Security
+
+* Dependabot
+* Code-smells
+* Trufflehog
+* Sonarcloud
+
+---
+
+## En wat is het doel dan? 
+Bewijsbaar vertouwen!
+
+Lever Sbom's mee in je build artifacts.
+Lever de output van je quality tooling mee.
+Timestamp / sign deze builds en quality assurance files.
+Alles in de CI \o/
+Controle op deze zaken in de CD \\o//
+
+---
+
 <!-- _class: title -->
 
 # Vraag of casus?
