@@ -181,23 +181,23 @@ sequenceDiagram
 
 ---
 
-## Dus, wat nu? Is dit alleen een softwareprobleem? 
+## Dus, wat nu? Is dit alleen een software-probleem?
 
-Nee! het is en een softwareding, *en* een regel en wetgeving ding.
+Nee! het is en een software-ding, _en_ een regel en wetgeving ding.
 
-* De bio
-* Pas toe en leg uit
-* Nis2
-* CRA
+- De BIO
+- Pas toe of leg uit
+- NIS2
+- CRA
 
 ---
 
 ## Tooling voor verschillende doelen
 
-* Code
-* Platform
-* Security speifiek
-  
+- Code
+- Platform
+- Security specifiek
+
 Idealiter doorlopend en continue.
 
 ---
@@ -206,43 +206,44 @@ Idealiter doorlopend en continue.
 
 Reviews / conformity
 
-* Unit tests
-* Linting
-* Code coverage
-* Code smells
-* Api-design rules validator
-* QualityTime
-* Jenkins
+- Unit tests
+- Linting
+- Code coverage
+- Code smells
+- Api Design Rules validator
+- QualityTime
+- Jenkins
 
 ---
 
 ## Platform / hosting
 
-Code is vaak 'kaal' hosting voegt laagjes toe die cruciaal zijn voor security.
+Code is vaak 'kaal'. Hosting voegt laagjes toe die cruciaal zijn voor security.
 
-* Itnernet.nl
-* Openkat.nl
-* ssltest
+- Itnernet.nl
+- Openkat.nl
+- ssltest
 
 ---
 
 ## Security
 
-* Dependabot
-* Code-smells
-* Trufflehog
-* Sonarcloud
+- Dependabot
+- Code-smells
+- Trufflehog
+- Sonarcloud
 
 ---
 
-## En wat is het doel dan? 
-Bewijsbaar vertouwen!
+## En wat is het doel dan?
 
-* Lever Sbom's mee in je build artifacts.
-* Lever de output van je quality tooling mee.
-* Timestamp / sign deze builds en quality assurance files.
-* Alles in de CI \o/
-* Controle op deze zaken in de CD \\o//
+Bewijsbaar vertrouwen!
+
+- Lever SBoM's mee in je build artifacts
+- Lever de output van je quality tooling mee
+- Timestamp / sign deze builds en quality assurance files
+- Alles in de CI \o/
+- Controle op deze zaken in de CD \\o//
 
 ---
 
