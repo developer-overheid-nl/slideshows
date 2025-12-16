@@ -238,11 +238,11 @@ Code is vaak 'kaal' hosting voegt laagjes toe die cruciaal zijn voor security.
 ## En wat is het doel dan? 
 Bewijsbaar vertouwen!
 
-Lever Sbom's mee in je build artifacts.
-Lever de output van je quality tooling mee.
-Timestamp / sign deze builds en quality assurance files.
-Alles in de CI \o/
-Controle op deze zaken in de CD \\o//
+* Lever Sbom's mee in je build artifacts.
+* Lever de output van je quality tooling mee.
+* Timestamp / sign deze builds en quality assurance files.
+* Alles in de CI \o/
+* Controle op deze zaken in de CD \\o//
 
 ---
 
