@@ -2,6 +2,7 @@ publiccodeYmlVersion: "0.5"
 
 name: Slideshows
 url: https://github.com/developer-overheid-nl/slideshows
+isBasedOn: https://github.com/dvh/slideshows
 landingURL: https://developer-overheid-nl.github.io/slideshows
 softwareType: standalone/web
 
