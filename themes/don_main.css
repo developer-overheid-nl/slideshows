@@ -239,3 +239,14 @@ section.page-image-only h2{
 .card-border{
   border: solid #CBD5E1 2px;
 }
+
+.spell-error {
+  text-decoration: underline wavy #B3261E;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+marp-pre{
+  position: relative;
+  z-index: 2;
+}
