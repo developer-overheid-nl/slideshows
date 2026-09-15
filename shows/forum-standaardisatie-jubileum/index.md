@@ -7,9 +7,9 @@ footer: "![width:250px](../../themes/logo.png)"
 lang: nl
 ---
 
-# Developers hebben tools nodig
+# Een vitale stap naar de praktijk: developer tooling voor standaarden
 
-<p style="text-align: center; max-width: 60%; margin: 0 auto;">En waarom we veel meer moeten investeren in developertooling voor standaarden</p>
+<!-- <p style="text-align: center; max-width: 60%; margin: 0 auto;">En waarom we veel meer moeten investeren in developertooling voor standaarden</p> -->
 
 <!-- _class: title invert -->
 
@@ -28,7 +28,6 @@ In ons geval heten die meetinstrumenten eerder "tools" of "linters" of "checkers
 Ik ga de rest van deze presentatie gebruiken om uit te leggen hoe developers werken en wat we daarvan kunnen 
 leren als het gaat om de compliance van standaarden.
 
-
 -->
 
 ## whoami?
@@ -39,11 +38,11 @@ leren als het gaat om de compliance van standaarden.
   <ul>
     <li>Tom Ootes</li>
     <li>Developer.overheid.nl (2023)</li>
-    <li>Developer Advocate</li>
-    <li>Community/ outreach</li>
+    <li>Open Source, Developer Advocate</li>
+    <li>Community, outreach</li>
   </ul>
   <div>
-    <img src="./img/moi.png" alt="Tom Ootes">
+    <img src="./img/tom.png" alt="Tom Ootes">
   </div>
 </div>
 
@@ -78,26 +77,55 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 - Become compliant with government standards? -->
 
 
-## Een developer werkt
+
+## Een developer werkt en denkt
 
 - Iteratief, snel
-- Met machine leesbare formats (HTML, Python, Markdown, YAML)
+- Met machine leesbare bestandsformaten (HTML, Python, Markdown, YAML)
 - Pragmatisch en doelbewust
-- Gebruikt herhalende scripts
+- Gebruikt herhalende scripts om code te checken
+
+## Machine leesbaar?
+
+<!-- _class: invert -->
+
+```html
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <title>Pagina over de Diefdijk in Culemborg</title>
+</head>
+<body>
+  <h1>De Diefdijk</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Categorie</th>
+        <th>Gemeente</th>
+        <th>Type</th>
+    <tbody>
+      <tr>
+        <td>Waterkering</td>
+        <td>Culemborg</td>
+        <td>Dijk</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+```
 
 ## 
 
 <!-- _class: invert -->
 
-<img src="./img/release-pipeline-iteratief.svg" class="img-centered">
+<img src="./img/release-pipeline-iteratief.svg" class="img-centered" style="max-height: 600px;">
 
-## Bron is beschikbaar (open source)
+## Spellingcheck
 
-<!-- _class: invert -->
+Je kan het zien als een <span class="spell-error">spelligncheck</span> die constant checkt of 
+je tekst wel in orde is.
 
-<img src="./img/screenshot_adr_github.png" class="img-full-width">
-
-## Het haakje: linters en checkers als meetinstrumenten
 
 ## Internet.nl: domain check
 
@@ -111,41 +139,68 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 <img src="./img/screenshot-checker.png" class="img-centered">
 
+<!--
+
+* Niet ingaan op materie API
+- Laten zien dat de code gecheckt wordt op de standaard
+- Direct feedback
+
+-->
+
+## Rules
+
+## Het haakje: linters en checkers als meetinstrumenten
+
 ## Mijn punt: vaak mist er developer tooling
 
-- Enorme gemiste kans
+- Hier ligt een enorme kans
 - Direct compliant
-- Grotere kans dat er uberhaupt adoptie plaats vindt
+- Vitaal voor de adoptiegraad
 
+<!--
+- Grote investeringen in standaarden
+- Adoptiegraad blijft achter
+- Voorbeeld van een appeltaart/ hoeveelheid zout
+-->
 
-## Grote kansen: binnen informatie modellen
+<!-- ## Grote kansen binnen informatiemodellen
 
-- Ontworpen door architecten
+- Ontworpen door informatie-architecten
 - Ontoegankelijk voor developers
-- Samen de laatste horde nemen
+- Samen de laatste horde nemen -->
 
+<!-- ## Een voorbeeld: Aquo (Informatiehuis Water)
 
-## Een voorbeeld: Aquo
-
-"De Aquo-standaard (Aquo) is dé Nederlandse standaard voor de efficiënte en geautomatiseerde uitwisseling van waterdata.
-
-De Aquo-standaard is ontwikkeld en wordt beheerd door het Informatiehuis Water."
+"De Aquo-standaard (Aquo) is dé Nederlandse standaard voor de efficiënte en geautomatiseerde uitwisseling van waterdata."
 
 - Zeer goed gedocumenteerd
-- UML / Enterprise Architect
+- UML / Enterprise Architect -->
 
-<!-- - Alles is verschrikkelijk goed gedocumenteerd. Maar waarin? UML en Enterprise Architect.  -->
-<!-- - Alles is super nauwlettend vastgesteld. Maar niet in de taal van de developers. -->
+<!--
 
-## Informatiemodel Water (IMWA)
+Het is natuurlijk niet mijn bedoeling hier kritiek te leveren op de Aquo standaard. Ik wil
+alleen laten zien hoe je tools kan toevoegen aan de standaard zodat die bruikbaar wordt voor developers.
+Alles is verschrikkelijk goed gedocumenteerd. Maar waarin? UML en Enterprise Architect.
+Alles is super nauwlettend vastgesteld. Maar niet in de taal van de developers.
 
-<img src="./img/im_water.png" alt="" class="img-full-width">
+-->
+
+<!-- ## Informatiemodel Water (IMWA)
+
+<img src="./img/im_water.png" alt="" class="img-full-width"> -->
 
 ## Casus: ik wil een "Waterkering" vastleggen in een database
 
-- Nodig: machine leesbaar formaat
-- Kan via UML
-- Maar: foutgevoelig
+<img src="./img/waterkering-uml.svg" alt="UML-diagram van het objecttype Waterkering volgens Aquo IMWA Waterveiligheid" class="img-full-width">
+
+<!-- 
+  Kan via UML
+  Maar: foutgevoelig
+  Help developers: machine leesbaar formaat
+  
+-->
+
+## Ik heb een machine leesbaar formaat nodig!
 
 ## Dus, UML maar ook een JSON Schema.
 
@@ -153,14 +208,48 @@ De Aquo-standaard is ontwikkeld en wordt beheerd door het Informatiehuis Water."
 
 <img src="./img/uml-vs-jsonschema.svg" class="img-centered">
 
-## Voorbeeld: Schema
+## Voorbeeld: Schema Waterkering
 
-TOon op deze slide het hele schema
+<img src="./img/schema-waterkering.svg" class="img-full-width">
 
-## Met AI; guardrails hard nodig
+<!--
+Bron enum-waarden: Aquo-domeintabel "Waterkeringtype" (Dam, Dijk, Duin, Flexibele
+waterkering, Hoge gronden, Kistdam, Kunstwerk, Wandconstructie) — dezelfde typen die
+ook als losse klassen in de UML-diagram (slide "Casus: Waterkering") voorkomen.
+Gekozen voorbeeld: "Dijk" / naam "Diefdijk", consistent met het JSON-LD-voorbeeld verderop.
+-->
 
-## DUS: Investeer in developer tooling
+## Met AI; sturing (zijwieltjes) hard nodig
 
-- Laten we samen deze laatste horde nemen
-- Om te zorgen dat de implementatie graden te laten stijgen!!~
 
+<!-- 
+GOedkoper
+Hallucineert minder.
+
+-->
+
+
+## Conforme apps bouwen
+
+<img src="./img/webapp-waterkering.svg" class="img-centered" style="max-height: 800px;">
+
+
+
+<!-- 
+## Waarom is het nodig dat de architecten JSON Schema zelf gaan bouwen?
+UML moet altijd geintrpeteerd worden om naar JSON SChema te gaan. 
+-->
+
+<!-- We kunnen eindelijk makkelijk API's / bronnen bouwen met deze data. -->
+
+## Dus: investeer in developer tooling
+
+- Laten we samen deze horde nemen
+- Om te zorgen dat we de brug slaan naar de praktijk
+
+## Bedankt! 
+
+Vragen?
+
+🐘 [@tomootes](https://social.codefor.nl/@tomootes)
+📬 t.ootes@geonovum.nl

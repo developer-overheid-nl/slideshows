@@ -20,19 +20,27 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.99"
-     inkscape:cx="443.43434"
-     inkscape:cy="447.9798"
+     inkscape:zoom="1.4000714"
+     inkscape:cx="264.27223"
+     inkscape:cy="334.62579"
      inkscape:window-width="3440"
      inkscape:window-height="1371"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g6" />
+     inkscape:current-layer="svg22" />
   <title
      id="title1">Iteratief release- en pipelineproces</title>
   <defs
      id="defs2">
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#8ed1fa;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
     <marker
        id="arrow"
        viewBox="0 0 10 10"
@@ -71,22 +79,26 @@
      id="g6"
      transform="translate(12.121212,8.0808081)">
     <path
-       d="m 624.69697,155.55555 q 121,51 160,170"
+       d="m 624.69697,155.55555 c 119.68021,8.7384 147.46083,67.19552 158.01184,136.89767"
        marker-end="url(#arrow)"
-       id="path3" />
+       id="path3"
+       sodipodi:nodetypes="cc"
+       style="stroke:#8ed1fa;stroke-opacity:1" />
     <path
-       d="m 790,452 c 2,72.66667 -96.8982,132.40742 -130,140"
+       d="M 790.57697,485.92 C 776.22644,612.47192 672.59827,646.67682 611.9002,642.19273"
        marker-end="url(#arrow)"
        id="path4"
        sodipodi:nodetypes="cc" />
     <path
-       d="M 340,600 Q 207,569 210,460"
+       d="M 362.6797,657.04424 C 182.96291,610.11352 176.72322,533.75946 180.70707,452.92929"
        marker-end="url(#arrow)"
-       id="path5" />
+       id="path5"
+       sodipodi:nodetypes="cc" />
     <path
-       d="m 210.25253,331.61616 q 39,-119 160,-170"
+       d="M 187.02021,327.57576 C 191.9069,214.468 265.21316,145.98276 380.35354,140.40404"
        marker-end="url(#arrow)"
-       id="path6" />
+       id="path6"
+       sodipodi:nodetypes="cc" />
   </g>
   <!-- central "repeats every release" indicator -->
   <g
@@ -164,9 +176,10 @@
        fill="#6B7785"
        id="text11">commits &amp; pull requests</text>
   </g>
-  <!-- Right card: Nieuwe release -->
+  <!-- Right card: Nieuwe release (moved to bottom slot) -->
   <g
-     id="g13">
+     id="g13"
+     transform="translate(-337.171715,261.0101)">
     <rect
        x="715"
        y="340"
@@ -298,18 +311,19 @@
        fill="#6B7785"
        id="text15">deploy naar productie</text>
   </g>
-  <!-- Bottom card: Pipeline & checks -->
+  <!-- Bottom card: Pipeline & checks (moved to right slot) -->
   <g
-     id="g21">
+     id="g21"
+     transform="translate(295,-261)">
     <rect
-       x="340"
-       y="565"
-       width="320"
-       height="190"
-       rx="20"
-       fill="#FFFFFF"
-       stroke="#39870C"
-       stroke-width="2.5"
+       x="340.18127"
+       y="565.18127"
+       width="317.11221"
+       height="253.27382"
+       rx="19.819513"
+       fill="#ffffff"
+       stroke="#39870c"
+       stroke-width="2.60508"
        id="rect15" />
     <text
        x="500"
@@ -405,22 +419,22 @@
          width="130"
          height="46"
          rx="10"
-         fill="#E3F2DA"
-         stroke="#39870C"
+         fill="#e3f2da"
+         stroke="#39870c"
          stroke-width="1.5"
          id="rect18" />
       <circle
          cx="383"
          cy="701"
          r="12"
-         fill="#FFFFFF"
-         stroke="#39870C"
+         fill="#ffffff"
+         stroke="#39870c"
          stroke-width="1.5"
          id="circle18" />
       <path
-         d="M377,701 L381,706 L390,695"
+         d="m 377,701 4,5 9,-11"
          fill="none"
-         stroke="#39870C"
+         stroke="#39870c"
          stroke-width="2.5"
          stroke-linecap="round"
          stroke-linejoin="round"
@@ -429,10 +443,51 @@
          x="404"
          y="706"
          font-family="Arial, Helvetica, sans-serif"
-         font-size="13"
+         font-size="13px"
          font-weight="600"
          fill="#154273"
          id="text19">Lint</text>
+    </g>
+    <g
+       id="g19-6"
+       transform="translate(-0.25,55.75)">
+      <rect
+         x="360"
+         y="678"
+         width="130"
+         height="46"
+         rx="10"
+         fill="#e3f2da"
+         stroke="#39870c"
+         stroke-width="1.5"
+         id="rect18-7"
+         style="display:inline;stroke:#8ed1fa;stroke-opacity:1;fill:#8ed1fa;fill-opacity:1" />
+      <circle
+         cx="383"
+         cy="701"
+         r="12"
+         fill="#ffffff"
+         stroke="#39870c"
+         stroke-width="1.5"
+         id="circle18-5"
+         style="display:inline;stroke:#8ed1fa;stroke-opacity:1" />
+      <path
+         d="m 377,701 4,5 9,-11"
+         fill="none"
+         stroke="#39870c"
+         stroke-width="2.5"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         id="path18-3"
+         style="stroke:#0b7dc4;stroke-opacity:1" />
+      <text
+         x="404"
+         y="706"
+         font-family="Arial, Helvetica, sans-serif"
+         font-size="13px"
+         font-weight="600"
+         fill="#154273"
+         id="text19-5">Standaard?</text>
     </g>
     <!-- chip: Security -->
     <g
@@ -474,13 +529,21 @@
     </g>
     <text
        x="500"
-       y="744"
+       y="802"
        text-anchor="middle"
        font-family="Arial, Helvetica, sans-serif"
-       font-size="11"
+       font-size="11px"
        font-style="italic"
-       fill="#6B7785"
+       fill="#6b7785"
        id="text21">+ meer checks, afhankelijk van het project</text>
+    <text
+       xml:space="preserve"
+       style="writing-mode:lr-tb;direction:ltr;fill:#a6c2f1;fill-opacity:1;stroke:#e17000;stroke-width:1.00157"
+       x="444.80811"
+       y="870.95959"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"></tspan></text>
   </g>
   <!-- caption -->
   <text
