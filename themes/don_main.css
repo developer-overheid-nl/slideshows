@@ -240,6 +240,70 @@ section.page-image-only h2{
   border: solid #CBD5E1 2px;
 }
 
+quote {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 85%;
+  padding: 1.25rem 1.75rem;
+  border-left: 4px solid #017bc6;
+  background-color: var(--don-lichtblauw-200);
+  text-align: left;
+}
+
+quote .quote-term {
+  display: block;
+  font-family: "Liberation Mono", monospace;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #017bc6;
+}
+
+quote .quote-pos {
+  display: block;
+  font-style: italic;
+  font-size: 0.7em;
+  color: #475569;
+  margin-bottom: 0.6rem;
+}
+
+quote p {
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+quote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.7em;
+  font-style: normal;
+  text-align: right;
+  color: #475569;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-height: 420px;
+  border-radius: 6px;
+}
+
+figcaption {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.5em;
+  line-height: 1.4;
+  color: #94a3b8;
+}
+
+section.invert figcaption {
+  color: #cce7f4;
+}
+
 .spell-error {
   text-decoration: underline wavy #B3261E;
   text-decoration-thickness: 2px;

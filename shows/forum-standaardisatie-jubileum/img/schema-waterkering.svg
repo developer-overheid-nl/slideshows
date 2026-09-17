@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="20 0 1160 800"
+   viewBox="20 0 1160 740"
    width="1160"
-   height="800"
+   height="740"
    version="1.1"
    id="svg76"
    sodipodi:docname="schema-waterkering.svg"
@@ -23,15 +23,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.4182927"
-     inkscape:cx="451.24678"
-     inkscape:cy="297.18831"
-     inkscape:window-width="3440"
-     inkscape:window-height="1371"
+     inkscape:zoom="1.0028844"
+     inkscape:cx="542.43541"
+     inkscape:cy="436.24171"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg76" />
+     inkscape:current-layer="svg76"
+     showgrid="false" />
   <title
      id="title1">JSON Schema van Waterkering: naam is een vrije string, type is een enum uit de Aquo-domeintabel Waterkeringtype waarvan je er precies 1 kiest</title>
   <defs
@@ -45,8 +46,8 @@
        markerHeight="9"
        orient="auto">
       <path
-         d="M0,0 L10,5 L0,10 Z"
-         fill="#007BC7"
+         d="M 0,0 10,5 0,10 Z"
+         fill="#007bc7"
          id="path1" />
     </marker>
     <marker
@@ -58,14 +59,14 @@
        markerHeight="9"
        orient="auto">
       <path
-         d="M0,0 L10,5 L0,10 Z"
-         fill="#39870C"
+         d="M 0,0 10,5 0,10 Z"
+         fill="#39870c"
          id="path2" />
     </marker>
     <filter
        id="cardShadow"
        x="-0.0034090909"
-       y="-0.0078947368"
+       y="-0.0078947367"
        width="1.0068182"
        height="1.0157895">
       <feDropShadow
@@ -77,265 +78,238 @@
     </filter>
   </defs>
   <!-- decorative accent dots -->
-  <circle
-     cx="1120"
-     cy="28"
-     r="7"
-     fill="#007BC7"
-     opacity="0.18"
-     id="circle2" />
-  <circle
-     cx="1150"
-     cy="52"
-     r="4"
-     fill="#39870C"
-     opacity="0.25"
-     id="circle3" />
-  <circle
-     cx="1095"
-     cy="55"
-     r="5"
-     fill="#F5C26B"
-     opacity="0.3"
-     id="circle4" />
-  <circle
-     cx="1160"
-     cy="24"
-     r="3"
-     fill="#154273"
-     opacity="0.2"
-     id="circle5" />
   <!-- header -->
   <circle
      cx="70"
-     cy="95"
+     cy="27"
      r="26"
-     fill="#DCEFFB"
+     fill="#dceffb"
      id="circle6" />
   <text
      x="70"
-     y="103"
+     y="35"
      text-anchor="middle"
      font-family="Consolas, 'Courier New', monospace"
-     font-size="20"
+     font-size="20px"
      font-weight="700"
-     fill="#007BC7"
+     fill="#007bc7"
      id="text6">{ }</text>
   <text
      x="112"
-     y="90"
+     y="22"
      font-family="Arial, Helvetica, sans-serif"
-     font-size="24"
+     font-size="24px"
      font-weight="700"
      fill="#154273"
      id="text7">Waterkering</text>
   <text
      x="112"
-     y="112"
+     y="44"
      font-family="Arial, Helvetica, sans-serif"
-     font-size="14"
-     fill="#6B7785"
+     font-size="14px"
+     fill="#6b7785"
      id="text8">elke eigenschap heeft een afgedwongen vorm — geen ruimte voor interpretatie</text>
   <!-- ============ LEFT: code panel ============ -->
   <rect
      x="40"
-     y="140"
+     y="72"
      width="640"
      height="520"
      rx="18"
-     fill="#0F2A44"
+     fill="#0f2a44"
      id="rect8" />
   <g
      font-family="Consolas, 'Courier New', monospace"
-     font-size="13"
-     id="g56">
+     font-size="13px"
+     id="g56"
+     transform="translate(0,-68)">
     <text
        x="64"
        y="168"
-       fill="#8ED1FA"
+       fill="#8ed1fa"
        id="text9">{</text>
     <text
        x="80"
        y="189"
        id="text12"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan9">&quot;title&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan10">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan10">:</tspan><tspan
+         fill="#9be38a"
          id="tspan11">&quot;Waterkering&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan12">,</tspan></text>
     <text
        x="80"
        y="210"
-       font-size="12"
+       font-size="12px"
        id="text16"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan13">&quot;description&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan14">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan14">:</tspan><tspan
+         fill="#9be38a"
          id="tspan15">&quot;Kunstmatige hoogte, natuurlijke hoogte of gedeelte daarvan …&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan16">,</tspan></text>
     <text
        x="80"
        y="231"
        id="text20"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan17">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan18">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan18">:</tspan><tspan
+         fill="#9be38a"
          id="tspan19">&quot;object&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan20">,</tspan></text>
     <text
        x="80"
        y="252"
        id="text22"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan21">&quot;properties&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan22">: {</tspan></text>
     <text
        x="96"
        y="273"
        id="text24"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan23">&quot;id&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan24">: {</tspan></text>
     <text
        x="112"
        y="294"
        id="text27"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan25">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan26">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan26">:</tspan><tspan
+         fill="#9be38a"
          id="tspan27">&quot;string&quot;</tspan></text>
     <text
        x="96"
        y="315"
-       fill="#E4EAF0"
+       fill="#e4eaf0"
        id="text28">},</text>
     <text
        x="96"
        y="336"
        id="text29"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan28">&quot;naam&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan29">: {</tspan></text>
     <text
        x="112"
        y="357"
        id="text32"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan30">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan31">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan31">:</tspan><tspan
+         fill="#9be38a"
          id="tspan32">&quot;string&quot;</tspan></text>
     <text
        x="96"
        y="378"
-       fill="#E4EAF0"
+       fill="#e4eaf0"
        id="text33">},</text>
     <text
        x="96"
        y="399"
        id="text34"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan33">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan34">: {</tspan></text>
     <text
        x="112"
        y="420"
        id="text38"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan35">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan36">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan36">:</tspan><tspan
+         fill="#9be38a"
          id="tspan37">&quot;enum&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan38">,</tspan></text>
     <text
        x="112"
        y="441"
-       font-size="12"
+       font-size="12px"
        id="text42"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan39">&quot;description&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan40">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan40">:</tspan><tspan
+         fill="#9be38a"
          id="tspan41">&quot;Aquo-domeintabel 'Waterkeringtype'&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan42">,</tspan></text>
     <text
        x="112"
        y="462"
        id="text48"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan43">&quot;enum&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan44">: [</tspan><tspan
-         fill="#9BE38A"
+         fill="#9be38a"
          id="tspan45">&quot;Dam&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan46">, </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan46">,</tspan><tspan
+         fill="#9be38a"
          id="tspan47">&quot;Dijk&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan48">, …]</tspan></text>
     <text
        x="96"
        y="483"
-       fill="#E4EAF0"
+       fill="#e4eaf0"
        id="text49">},</text>
     <text
        x="96"
        y="504"
        id="text50"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan49">&quot;geometrie&quot;</tspan><tspan
-         fill="#E4EAF0"
+         fill="#e4eaf0"
          id="tspan50">: {</tspan></text>
     <text
        x="112"
        y="525"
        id="text53"><tspan
-         fill="#F5C26B"
+         fill="#f5c26b"
          id="tspan51">&quot;type&quot;</tspan><tspan
-         fill="#E4EAF0"
-         id="tspan52">: </tspan><tspan
-         fill="#9BE38A"
+         fill="#e4eaf0"
+         id="tspan52">:</tspan><tspan
+         fill="#9be38a"
          id="tspan53">&quot;string&quot;</tspan></text>
     <text
        x="96"
        y="546"
-       fill="#E4EAF0"
+       fill="#e4eaf0"
        id="text54">}</text>
     <text
        x="80"
        y="567"
-       fill="#E4EAF0"
+       fill="#e4eaf0"
        id="text55">}</text>
     <text
        x="64"
        y="588"
-       fill="#8ED1FA"
+       fill="#8ed1fa"
        id="text56">}</text>
   </g>
   <!-- ============ connectors ============ -->
   <path
-     d="m 183.62855,328.2442 c 23.56239,3.594 483.1315,-128.30639 542.71711,-129.07395"
+     d="m 183.62855,260.2442 c 23.56239,3.594 483.1315,-128.30639 542.71711,-129.07395"
      fill="none"
      stroke="#007bc7"
      stroke-width="2.5"
@@ -344,7 +318,7 @@
      id="path56"
      sodipodi:nodetypes="cc" />
   <path
-     d="m 175.87274,396.15649 c 25,0 468.49098,-10.89423 565.27946,17.30869"
+     d="m 175.87274,328.15649 c 25,0 468.49098,-10.89423 565.27946,17.30869"
      fill="none"
      stroke="#39870c"
      stroke-width="2.5"
@@ -355,7 +329,7 @@
   <!-- ============ RIGHT: card A - string ============ -->
   <g
      id="g77"
-     transform="translate(16)">
+     transform="translate(16,-68)">
     <circle
        cx="760"
        cy="195"
@@ -374,7 +348,7 @@
   </g>
   <text
      x="810"
-     y="191"
+     y="123"
      font-family="Consolas, 'Courier New', monospace"
      font-size="17px"
      font-weight="700"
@@ -382,53 +356,53 @@
      id="text58">naam</text>
   <text
      x="810"
-     y="210"
+     y="142"
      font-family="Arial, Helvetica, sans-serif"
      font-size="13px"
      fill="#6b7785"
      id="text59">type: string → vrije tekst</text>
   <rect
      x="750"
-     y="230"
+     y="162"
      width="380"
      height="46"
      rx="9"
-     fill="#F4F8FC"
-     stroke="#9BB4C7"
+     fill="#f4f8fc"
+     stroke="#9bb4c7"
      stroke-width="1.5"
      id="rect59" />
   <text
      x="768"
-     y="259"
+     y="191"
      font-family="Consolas, 'Courier New', monospace"
-     font-size="16"
+     font-size="16px"
      fill="#154273"
      id="text60">&quot;Diefdijk&quot;</text>
   <rect
      x="1108"
-     y="240"
+     y="172"
      width="2"
      height="24"
-     fill="#007BC7"
+     fill="#007bc7"
      id="rect60" />
   <text
      x="750"
-     y="303"
+     y="235"
      font-family="Arial, Helvetica, sans-serif"
-     font-size="12.5"
-     fill="#6B7785"
+     font-size="12.5px"
+     fill="#6b7785"
      id="text61">Elke tekstwaarde mag — er wordt niet gecontroleerd óf het</text>
   <text
      x="750"
-     y="319"
+     y="251"
      font-family="Arial, Helvetica, sans-serif"
-     font-size="12.5"
-     fill="#6B7785"
+     font-size="12.5px"
+     fill="#6b7785"
      id="text62">een bestaande of correcte naam is.</text>
   <!-- ============ RIGHT: card B - enum ============ -->
   <g
      id="g78"
-     transform="translate(-2.1152193,-2.0137575)">
+     transform="translate(-2.1152193,-70.013758)">
     <rect
        x="750"
        y="402"
@@ -450,7 +424,7 @@
   </g>
   <text
      x="750"
-     y="448"
+     y="380"
      font-family="Consolas, 'Courier New', monospace"
      font-size="15px"
      font-weight="700"
@@ -458,7 +432,7 @@
      id="text64">type</text>
   <text
      x="800"
-     y="446"
+     y="378"
      font-family="Arial, Helvetica, sans-serif"
      font-size="12.5px"
      fill="#6b7785"
@@ -468,7 +442,7 @@
      font-family="Arial, Helvetica, sans-serif"
      font-size="14px"
      id="g74"
-     transform="translate(0,-6)">
+     transform="translate(0,-74)">
     <!-- Dam -->
     <g
        id="g79"
@@ -612,7 +586,7 @@
   <!-- rejected value -->
   <g
      id="g80"
-     transform="translate(0,-10)">
+     transform="translate(0,-78)">
     <line
        x1="746"
        y1="744"
@@ -652,7 +626,7 @@
          sodipodi:role="line"
          id="tspan77"
          x="956.78418"
-         y="166.39725"></tspan></text>
+         y="166.39725" /></text>
   </g>
   <metadata
      id="metadata80">

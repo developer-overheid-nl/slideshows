@@ -5,19 +5,52 @@
    height="900"
    version="1.1"
    id="svg-browser"
+   sodipodi:docname="webapp-waterkering.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.93888067"
+     inkscape:cx="35.148237"
+     inkscape:cy="394.61884"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="browserWindow"
+     showguides="false" />
   <defs
      id="defs-browser">
-    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#007BC7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#005AA0;stop-opacity:1" />
+    <linearGradient
+       id="headerGradient"
+       x1="0%"
+       y1="0%"
+       x2="100%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#007BC7;stop-opacity:1"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#005AA0;stop-opacity:1"
+         id="stop2" />
     </linearGradient>
   </defs>
-
   <!-- Browser Window Frame -->
-  <g id="browserWindow">
-    
+  <g
+     id="browserWindow">
     <!-- Window Header Bar (title bar) -->
     <rect
        x="20"
@@ -28,15 +61,14 @@
        fill="#f0f0f0"
        stroke="#999999"
        stroke-width="1"
-       id="titleBar"/>
-    
+       id="titleBar" />
     <!-- Window controls (minimize, maximize, close) -->
     <circle
        cx="45"
        cy="40"
        r="8"
        fill="#ff5f57"
-       id="closeButton"/>
+       id="closeButton" />
     <text
        x="45"
        y="45"
@@ -46,13 +78,12 @@
        font-weight="bold"
        fill="#ffffff"
        id="closeText">×</text>
-    
     <circle
        cx="70"
        cy="40"
        r="8"
        fill="#febd2e"
-       id="minimizeButton"/>
+       id="minimizeButton" />
     <text
        x="70"
        y="45"
@@ -62,232 +93,167 @@
        font-weight="bold"
        fill="#ffffff"
        id="minimizeText">−</text>
-    
     <circle
        cx="95"
        cy="40"
        r="8"
        fill="#28ca42"
-       id="maximizeButton"/>
+       id="maximizeButton" />
     <text
        x="95"
-       y="45"
+       y="43"
        text-anchor="middle"
        font-family="Arial, Helvetica, sans-serif"
-       font-size="12"
+       font-size="12px"
        font-weight="bold"
        fill="#ffffff"
        id="maximizeText">□</text>
-    
     <!-- Window title -->
     <text
        x="120"
-       y="42"
+       y="46"
        text-anchor="start"
        font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-       font-size="14"
+       font-size="14px"
        fill="#333333"
        id="windowTitle">Waterkering Webapp − JSON Schema Form</text>
-
     <!-- Browser Tabs -->
-    <rect
-       x="20"
-       y="60"
-       width="1160"
-       height="40"
-       fill="#f0f0f0"
-       stroke="#999999"
-       stroke-width="0 1 1 0"
-       id="tabBar"/>
-    
     <!-- Active Tab -->
-    <rect
-       x="30"
-       y="65"
-       width="200"
-       height="30"
-       rx="8 8 0 0"
-       fill="#ffffff"
-       stroke="#999999"
-       stroke-width="1"
-       id="activeTab"/>
-    <text
-       x="140"
-       y="84"
-       text-anchor="middle"
-       font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-       font-size="13"
-       fill="#333333"
-       id="activeTabText">Waterkering</text>
-    
     <!-- Inactive Tab -->
-    <rect
-       x="230"
-       y="65"
-       width="150"
-       height="30"
-       rx="8 8 0 0"
-       fill="#e0e0e0"
-       stroke="#999999"
-       stroke-width="1"
-       id="inactiveTab"/>
-    <text
-       x="295"
-       y="84"
-       text-anchor="middle"
-       font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-       font-size="13"
-       fill="#666666"
-       id="inactiveTabText">Overzicht</text>
-
     <!-- Address Bar -->
-    <rect
-       x="20"
-       y="100"
-       width="1160"
-       height="40"
-       fill="#ffffff"
-       stroke="#999999"
-       stroke-width="1"
-       id="addressBar"/>
-    
     <!-- Navigation buttons -->
-    <rect
-       x="30"
-       y="105"
-       width="24"
-       height="24"
-       rx="4"
-       fill="#e0e0e0"
-       id="backButton"/>
-    <path
-       d="M 38 117 L 44 111 L 44 123 Z"
-       fill="#666666"
-       id="backArrow"/>
-    
-    <rect
-       x="60"
-       y="105"
-       width="24"
-       height="24"
-       rx="4"
-       fill="#e0e0e0"
-       id="forwardButton"/>
-    <path
-       d="M 72 111 L 72 123 L 66 117 Z"
-       fill="#666666"
-       id="forwardArrow"/>
-    
-    <rect
-       x="90"
-       y="105"
-       width="24"
-       height="24"
-       rx="4"
-       fill="#e0e0e0"
-       id="refreshButton"/>
-    <path
-       d="M 99 117 L 100 111 M 100 123 L 99 117"
-       stroke="#666666"
-       stroke-width="2"
-       stroke-linecap="round"
-       id="refreshIcon"/>
-    
     <!-- URL -->
-    <rect
-       x="120"
-       y="107"
-       width="800"
-       height="20"
-       rx="4"
-       fill="#ffffff"
-       stroke="#999999"
-       stroke-width="1"
-       id="urlBackground"/>
-    <text
-       x="130"
-       y="121"
-       text-anchor="start"
-       font-family="Consolas, 'Courier New', monospace"
-       font-size="12"
-       fill="#666666"
-       id="urlText">https://waterkering_app.overheid.nl/new</text>
-    
     <!-- Lock icon -->
-    <rect
-       x="925"
-       y="105"
-       width="16"
-       height="24"
-       rx="4"
-       fill="#e0e0e0"
-       id="lockIconBg"/>
-    <text
-       x="933"
-       y="120"
-       text-anchor="middle"
-       font-family="Arial, Helvetica, sans-serif"
-       font-size="12"
-       fill="#666666"
-       id="lockIcon">🔒</text>
-
+    <g
+       id="g20"
+       transform="translate(0,-36.192469)">
+      <rect
+         x="20"
+         y="100"
+         width="1160"
+         height="40"
+         fill="#ffffff"
+         stroke="#999999"
+         stroke-width="1"
+         id="addressBar" />
+      <rect
+         x="30"
+         y="105"
+         width="24"
+         height="24"
+         rx="4"
+         fill="#e0e0e0"
+         id="backButton" />
+      <path
+         d="m 38,117 6,-6 v 12 z"
+         fill="#666666"
+         id="backArrow" />
+      <rect
+         x="60"
+         y="105"
+         width="24"
+         height="24"
+         rx="4"
+         fill="#e0e0e0"
+         id="forwardButton" />
+      <path
+         d="m 72,111 v 12 l -6,-6 z"
+         fill="#666666"
+         id="forwardArrow" />
+      <rect
+         x="120"
+         y="107"
+         width="800"
+         height="20"
+         rx="4"
+         fill="#ffffff"
+         stroke="#999999"
+         stroke-width="1"
+         id="urlBackground" />
+      <text
+         x="130"
+         y="121"
+         text-anchor="start"
+         font-family="Consolas, 'Courier New', monospace"
+         font-size="12px"
+         fill="#666666"
+         id="urlText"
+         style="display:inline">https://waterkering_app.overheid.nl/new</text>
+      <rect
+         x="925"
+         y="105"
+         width="16"
+         height="24"
+         rx="4"
+         fill="#e0e0e0"
+         id="lockIconBg" />
+      <text
+         x="933"
+         y="120"
+         text-anchor="middle"
+         font-family="Arial, Helvetica, sans-serif"
+         font-size="12px"
+         fill="#666666"
+         id="lockIcon">🔒</text>
+      <g
+         id="g17"
+         transform="translate(0.53254904,0.28098)">
+        <rect
+           x="90"
+           y="105"
+           width="24"
+           height="24"
+           rx="4"
+           fill="#e0e0e0"
+           id="refreshButton" />
+        <circle
+           style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:1.51181"
+           id="path17"
+           cx="102.31599"
+           cy="-116.96107"
+           r="5.3920588"
+           transform="scale(1,-1)" />
+      </g>
+    </g>
     <!-- Browser Content Area -->
-    <rect
-       x="20"
-       y="140"
-       width="1160"
-       height="740"
-       fill="#ffffff"
-       stroke="#999999"
-       stroke-width="1"
-       id="contentArea"/>
-
     <!-- ============ PAGE CONTENT ============ -->
-
     <!-- Main Form Container -->
-    <rect
-       x="40"
-       y="180"
-       width="1120"
-       height="500"
-       rx="18"
-       fill="#F4F8FC"
-       stroke="#9BB4C7"
-       stroke-width="1"
-       id="mainForm"/>
-
     <!-- Form Title -->
-    <text
-       x="60"
-       y="210"
-       font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-       font-size="20"
-       font-weight="700"
-       fill="#154273"
-       id="formTitle">Nieuwe Waterkering</text>
-    
-    <text
-       x="60"
-       y="230"
-       font-family="Arial, Helvetica, sans-serif"
-       font-size="14"
-       fill="#6B7785"
-       id="formDesc">Vul de gegevens in volgens het gestandaardiseerde schema</text>
-
     <!-- Form Fields -->
-    <g id="formFields">
+    <g
+       id="formFields"
+       transform="translate(0,-32.384937)">
       <!-- Row 1: ID and Naam -->
-      <g id="formRow1">
+      <rect
+         x="20"
+         y="140"
+         width="1160"
+         height="740"
+         fill="#ffffff"
+         stroke="#999999"
+         stroke-width="1"
+         id="contentArea" />
+      <rect
+         x="26.082912"
+         y="144.54565"
+         width="744.16199"
+         height="554.46161"
+         rx="11.959746"
+         fill="#f4f8fc"
+         stroke="#9bb4c7"
+         stroke-width="0.858368"
+         id="mainForm" />
+      <g
+         id="formRow1">
         <!-- ID Field -->
         <text
            x="60"
            y="270"
            font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-           font-size="16"
+           font-size="16px"
            font-weight="600"
            fill="#154273"
            id="labelId">id *</text>
-        
         <rect
            x="60"
            y="290"
@@ -295,28 +261,25 @@
            height="40"
            rx="6"
            fill="#ffffff"
-           stroke="#9BB4C7"
+           stroke="#9bb4c7"
            stroke-width="1"
-           id="inputId"/>
-        
+           id="inputId" />
         <text
            x="70"
            y="315"
            font-family="Consolas, 'Courier New', monospace"
-           font-size="14"
+           font-size="14px"
            fill="#154273"
            id="inputIdText">wk-001</text>
-
         <!-- Naam Field -->
         <text
            x="290"
            y="270"
            font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-           font-size="16"
+           font-size="16px"
            font-weight="600"
            fill="#154273"
            id="labelNaam">naam *</text>
-        
         <rect
            x="290"
            y="290"
@@ -324,94 +287,91 @@
            height="40"
            rx="6"
            fill="#ffffff"
-           stroke="#9BB4C7"
+           stroke="#9bb4c7"
            stroke-width="1"
-           id="inputNaam"/>
-        
+           id="inputNaam" />
         <text
            x="300"
            y="315"
            font-family="Consolas, 'Courier New', monospace"
-           font-size="14"
+           font-size="14px"
            fill="#154273"
            id="inputNaamText">Diefdijk</text>
       </g>
-
       <!-- Row 2: Type (with dropdown) and Geometrie -->
-      <g id="formRow2">
+      <g
+         id="formRow2">
         <!-- Type Field -->
         <text
            x="60"
-           y="350"
+           y="354"
            font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-           font-size="16"
+           font-size="16px"
            font-weight="600"
            fill="#154273"
            id="labelType">type *</text>
-        
         <rect
            x="60"
            y="370"
            width="360"
            height="40"
-           rx="6 6 0 0"
+           rx="6"
            fill="#ffffff"
-           stroke="#39870C"
+           stroke="#39870c"
            stroke-width="1.5"
-           id="inputType"/>
-        
+           id="inputType" />
         <text
            x="70"
            y="395"
            font-family="Consolas, 'Courier New', monospace"
-           font-size="14"
+           font-size="14px"
            fill="#154273"
            id="inputTypeText">Dijk</text>
-        
         <!-- Dropdown button -->
-        <rect
-           x="420"
-           y="370"
-           width="40"
-           height="40"
-           rx="0 6 6 0"
-           fill="#2A6A00"
-           id="dropdownButton"/>
-        
-        <path
-           d="M 435 382 L 442 390 L 449 382"
-           fill="none"
-           stroke="#ffffff"
-           stroke-width="2"
-           stroke-linecap="round"
-           stroke-linejoin="round"
-           id="dropdownChevron"/>
-
+        <g
+           id="g18">
+          <rect
+             x="420"
+             y="370"
+             width="40"
+             height="40"
+             rx="0 6 6 0"
+             fill="#2a6a00"
+             id="dropdownButton" />
+          <path
+             d="m 446.64236,386.55245 -7,8 -7,-8"
+             fill="none"
+             stroke="#ffffff"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             id="dropdownChevron" />
+        </g>
         <!-- Open dropdown menu -->
         <rect
-           x="60"
-           y="410"
-           width="400"
-           height="200"
-           rx="6"
+           x="60.019604"
+           y="410.01959"
+           width="399.96078"
+           height="210.61177"
+           rx="5.9994121"
            fill="#ffffff"
-           stroke="#39870C"
+           stroke="#39870c"
            stroke-width="1.5"
-           id="dropdownMenu"/>
-        
+           id="dropdownMenu" />
         <!-- Dropdown shadow -->
         <rect
            x="62"
            y="412"
-           width="396"
-           height="196"
-           rx="4"
+           width="394.40234"
+           height="206.11845"
+           rx="3.9892271"
            fill="#000000"
            fill-opacity="0.08"
-           id="dropdownShadow"/>
-        
+           id="dropdownShadow"
+           style="stroke-width:1.00385" />
         <!-- Dropdown items -->
-        <g id="dropdownItems">
+        <g
+           id="dropdownItems">
           <!-- Dam -->
           <rect
              x="65"
@@ -420,15 +380,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemDam"/>
+             id="dropdownItemDam" />
           <text
              x="75"
              y="432"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemDamText">Dam</text>
-          
           <!-- Dijk (selected) -->
           <rect
              x="65"
@@ -436,25 +395,16 @@
              width="390"
              height="25"
              rx="3"
-             fill="#EAF6E4"
-             id="dropdownItemDijk"/>
+             fill="#eaf6e4"
+             id="dropdownItemDijk" />
           <text
              x="75"
              y="457"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              font-weight="700"
              id="dropdownItemDijkText">Dijk</text>
-          <path
-             d="M 445 449 L 457 449 L 451 459"
-             fill="none"
-             stroke="#39870C"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-             id="checkmarkDijk"/>
-          
           <!-- Duin -->
           <rect
              x="65"
@@ -463,15 +413,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemDuin"/>
+             id="dropdownItemDuin" />
           <text
              x="75"
              y="482"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemDuinText">Duin</text>
-          
           <!-- Flexibele waterkering -->
           <rect
              x="65"
@@ -480,15 +429,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemFlex"/>
+             id="dropdownItemFlex" />
           <text
              x="75"
              y="507"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemFlexText">Flexibele waterkering</text>
-          
           <!-- Hoge gronden -->
           <rect
              x="65"
@@ -497,15 +445,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemHoge"/>
+             id="dropdownItemHoge" />
           <text
              x="75"
              y="532"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemHogeText">Hoge gronden</text>
-          
           <!-- Kistdam -->
           <rect
              x="65"
@@ -514,15 +461,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemKist"/>
+             id="dropdownItemKist" />
           <text
              x="75"
              y="557"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemKistText">Kistdam</text>
-          
           <!-- Kunstwerk -->
           <rect
              x="65"
@@ -531,15 +477,14 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemKunst"/>
+             id="dropdownItemKunst" />
           <text
              x="75"
              y="582"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemKunstText">Kunstwerk</text>
-          
           <!-- Wandconstructie -->
           <rect
              x="65"
@@ -548,140 +493,90 @@
              height="25"
              rx="3"
              fill="#ffffff"
-             id="dropdownItemWand"/>
+             id="dropdownItemWand" />
           <text
              x="75"
              y="607"
              font-family="Consolas, 'Courier New', monospace"
-             font-size="13"
+             font-size="13px"
              fill="#154273"
              id="dropdownItemWandText">Wandconstructie</text>
         </g>
-
         <!-- Geometrie Field -->
         <text
-           x="520"
-           y="350"
+           x="492"
+           y="356"
            font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-           font-size="16"
+           font-size="16px"
            font-weight="600"
            fill="#154273"
            id="labelGeometrie">geometrie</text>
-        
         <rect
-           x="520"
+           x="492"
            y="370"
            width="240"
            height="40"
            rx="6"
            fill="#ffffff"
-           stroke="#9BB4C7"
+           stroke="#9bb4c7"
            stroke-width="1"
-           id="inputGeometrie"/>
-        
+           id="inputGeometrie" />
         <text
-           x="530"
-           y="395"
+           x="522"
+           y="393"
            font-family="Consolas, 'Courier New', monospace"
-           font-size="12"
-           fill="#6B7785"
+           font-size="12px"
+           fill="#6b7785"
            id="inputGeometrieText">POLYGON((123.45,52.12,...))</text>
       </g>
-
       <!-- Submit Button -->
-      <rect
-         x="60"
-         y="610"
-         width="200"
-         height="48"
-         rx="8"
-         fill="#007BC7"
-         id="submitButton"/>
-      
+      <g
+         id="g19"
+         transform="translate(-2.1301962,10.650981)">
+        <rect
+           x="60"
+           y="624"
+           width="200"
+           height="48"
+           rx="8"
+           fill="#007bc7"
+           id="submitButton" />
+        <text
+           x="155.73961"
+           y="649.37885"
+           text-anchor="middle"
+           font-family="'Segoe UI', Arial, Helvetica, sans-serif"
+           font-size="16px"
+           font-weight="700"
+           fill="#ffffff"
+           id="submitText">Opslaan</text>
+      </g>
       <text
-         x="160"
-         y="635"
-         text-anchor="middle"
+         x="60"
+         y="210"
          font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-         font-size="16"
+         font-size="20px"
          font-weight="700"
-         fill="#ffffff"
-         id="submitText">Opslaan</text>
+         fill="#154273"
+         id="formTitle">Nieuwe Waterkering</text>
+      <text
+         x="60"
+         y="230"
+         font-family="Arial, Helvetica, sans-serif"
+         font-size="14px"
+         fill="#6b7785"
+         id="formDesc">Vul de gegevens in volgens het gestandaardiseerde schema</text>
     </g>
-
     <!-- Result Section -->
-    <text
-       x="60"
-       y="700"
-       font-family="'Segoe UI', Arial, Helvetica, sans-serif"
-       font-size="20"
-       font-weight="700"
-       fill="#154273"
-       id="resultTitle">Resultaat (JSON)</text>
-
     <!-- JSON Output Box -->
-    <rect
-       x="60"
-       y="725"
-       width="1060"
-       height="80"
-       rx="6"
-       fill="#0F2A44"
-       id="jsonOutput"/>
-
     <g
        font-family="Consolas, 'Courier New', monospace"
        font-size="13"
-       id="jsonText">
-      <text
-         x="75"
-         y="750"
-         fill="#8ED1FA"
-         id="jsonText1">{</text>
-      <text
-         x="95"
-         y="770"
-         id="jsonText2"><tspan
-           fill="#F5C26B"
-           >"id"</tspan><tspan
-           fill="#E4EAF0"
-           >: </tspan><tspan
-           fill="#9BE38A"
-           >"wk-001"</tspan><tspan
-           fill="#E4EAF0"
-           >, </tspan><tspan
-           fill="#F5C26B"
-           >"naam"</tspan><tspan
-           fill="#E4EAF0"
-           >: </tspan><tspan
-           fill="#9BE38A"
-           >"Diefdijk"</tspan><tspan
-           fill="#E4EAF0"
-           >, </tspan><tspan
-           fill="#F5C26B"
-           >"type"</tspan><tspan
-           fill="#E4EAF0"
-           >: </tspan><tspan
-           fill="#9BE38A"
-           >"Dijk"</tspan><tspan
-           fill="#E4EAF0"
-           >, </tspan><tspan
-           fill="#F5C26B"
-           >"geometrie"</tspan><tspan
-           fill="#E4EAF0"
-           >: </tspan><tspan
-           fill="#9BE38A"
-           >"POLYGON(...)"</tspan></text>
-      <text
-         x="75"
-         y="790"
-         fill="#8ED1FA"
-         id="jsonText3">}</text>
-    </g>
-
+       id="jsonText" />
   </g>
-
   <!-- Metadata for accessibility -->
-  <title id="svgTitle">Browser venster met Waterkering Webapp</title>
-  <desc id="svgDesc">Een browser venster dat een webapplicatie toont voor het invoeren van Waterkering data volgens het JSON Schema datamodel, met een open dropdown menu voor het type veld.</desc>
+  <title
+     id="svgTitle">Browser venster met Waterkering Webapp</title>
+  <desc
+     id="svgDesc">Een browser venster dat een webapplicatie toont voor het invoeren van Waterkering data volgens het JSON Schema datamodel, met een open dropdown menu voor het type veld.</desc>
 </svg>
