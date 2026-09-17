@@ -147,11 +147,15 @@ je tekst wel in orde is.
 
 -->
 
-## Rules
 
 ## Het haakje: linters en checkers als meetinstrumenten
 
-## Mijn punt: vaak mist er developer tooling
+- Checken is voor veel standaarden handwerk
+- Dit is niet iets wat developers developertooling
+- Vertrouwen leggen in tooling (internet.nl) 
+- Samen beter maken
+
+## Vaak mist er developer tooling
 
 - Hier ligt een enorme kans
 - Direct compliant
@@ -163,44 +167,43 @@ je tekst wel in orde is.
 - Voorbeeld van een appeltaart/ hoeveelheid zout
 -->
 
-<!-- ## Grote kansen binnen informatiemodellen
+## Casus: ik ga een website bouwen waarbij ik het concept "Waterkering" moet vastleggen
 
-- Ontworpen door informatie-architecten
-- Ontoegankelijk voor developers
-- Samen de laatste horde nemen -->
-
-<!-- ## Een voorbeeld: Aquo (Informatiehuis Water)
-
-"De Aquo-standaard (Aquo) is dé Nederlandse standaard voor de efficiënte en geautomatiseerde uitwisseling van waterdata."
-
-- Zeer goed gedocumenteerd
-- UML / Enterprise Architect -->
-
-<!--
-
-Het is natuurlijk niet mijn bedoeling hier kritiek te leveren op de Aquo standaard. Ik wil
-alleen laten zien hoe je tools kan toevoegen aan de standaard zodat die bruikbaar wordt voor developers.
-Alles is verschrikkelijk goed gedocumenteerd. Maar waarin? UML en Enterprise Architect.
-Alles is super nauwlettend vastgesteld. Maar niet in de taal van de developers.
-
--->
-
-<!-- ## Informatiemodel Water (IMWA)
-
-<img src="./img/im_water.png" alt="" class="img-full-width"> -->
-
-## Casus: ik wil een "Waterkering" vastleggen in een database
-
-<img src="./img/waterkering-uml.svg" alt="UML-diagram van het objecttype Waterkering volgens Aquo IMWA Waterveiligheid" class="img-full-width">
+> **Waterkering**
+> Kunstmatige hoogte, natuurlijke hoogte of gedeelte daarvan, 
+> of hoge gronden met ondersteunende kunstwerken, die een waterkerende
+> of mede een waterkerende functie hebben.
+> ~ Aquo-standaard
 
 <!-- 
   Kan via UML
   Maar: foutgevoelig
-  Help developers: machine leesbaar formaat
-  
+  Help developers: machine leesbaar formaat  
 -->
 
-## Ik heb een machine leesbaar formaat nodig!
+## Vraag aan jullie: welke typen waterkeringen zijn er?
+
+## Deze typen waterkeringen zijn er:
+* Dam
+* Dijk
+* Duin
+* Flexibele waterkering
+* Hoge gronden
+* Kistdam
+* Kunstwerk
+* Wandconstructie
+
+## 
+
+<img src="./img/screenshot_geostandaarden.png" class="img-full-width">
+
+## 
+
+<img src="./img/screenshot_kadaster.png" class="img-full-width">
+
+## LINKED Data
+
+<img src="./img/waterkering-uml.svg" class="img-full-width">
 
 ## Dus, UML maar ook een JSON Schema.
 
@@ -210,7 +213,11 @@ Alles is super nauwlettend vastgesteld. Maar niet in de taal van de developers.
 
 ## Voorbeeld: Schema Waterkering
 
-<img src="./img/schema-waterkering.svg" class="img-full-width">
+<img src="./img/schema-waterkering.svg" class="img-centered">
+
+## Als koken zonder recept
+
+<img src="./img/appeltaart.jpg" alt="" class="img-centered">
 
 <!--
 Bron enum-waarden: Aquo-domeintabel "Waterkeringtype" (Dam, Dijk, Duin, Flexibele
@@ -221,19 +228,15 @@ Gekozen voorbeeld: "Dijk" / naam "Diefdijk", consistent met het JSON-LD-voorbeel
 
 ## Met AI; sturing (zijwieltjes) hard nodig
 
-
 <!-- 
-GOedkoper
+Goedkoper
 Hallucineert minder.
 
 -->
 
-
 ## Conforme apps bouwen
 
 <img src="./img/webapp-waterkering.svg" class="img-centered" style="max-height: 800px;">
-
-
 
 <!-- 
 ## Waarom is het nodig dat de architecten JSON Schema zelf gaan bouwen?
@@ -244,8 +247,9 @@ UML moet altijd geintrpeteerd worden om naar JSON SChema te gaan.
 
 ## Dus: investeer in developer tooling
 
-- Laten we samen deze horde nemen
-- Om te zorgen dat we de brug slaan naar de praktijk
+- Developer tooling zou een vereiste moeten zijn voor de "pas-toe-leg-uit" lijst
+- Laten we hierin investeren
+- De brug slaan naar de praktijk
 
 ## Bedankt! 
 
