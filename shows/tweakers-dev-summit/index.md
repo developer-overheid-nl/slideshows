@@ -88,7 +88,7 @@ beter wil worden:
 - Security
 - Data delen (API's, Informatiemodellen)
 
-## Pas toe leg uit - lijst
+### Pas toe leg uit - lijst
 
 Hier ga ik iets vertellen over de PTOLU lijst.
 
@@ -104,7 +104,15 @@ Iedereen die er iets van vind kan een PR inschieten.
 
 Van PROD naar Open API Specification
 
-##
+## Wat voor problemen het kan oplossen
+
+De Nederlandse overheid is een gedecentraliseerd geheel waarbij elke organisatie
+zelf verantwoordelijk is voor de uitvoering van haar IT. Ik zie dit op korte
+termijn ook niet snel veranderen.
+
+## Dus hoe krijgen we die standaaarden aan de man?
+
+Goede tooling aanbieden! Dit is ook onze filosofie bij developer.overheid.nl.
 
 ## API Design Rules
 
@@ -113,7 +121,15 @@ Screenshot van de RESPEC van de API Design Rules.
 Binnen de overheid hebben we tal van standaarden die verschrikkelijk goed
 gedocumenteerd zijn.
 
-##
+## De rules!
+
+NOICE TABLE WITH:
+
+technical rules // and functional rules
+
+## Focus op CI/CD
+
+Onze tools kan je uiteraard in je Github/ Gitlab/ Forgejo pipeline hangen.
 
 <img src="./img/harold.png" class="img-centered">
 
