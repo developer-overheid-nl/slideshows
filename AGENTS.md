@@ -4,6 +4,8 @@ Dit document beschrijft de uitstraling van plaatjes die we voor developer.overhe
 ## Uitstraling
 Het moet er tech savvy uit zien, met als doelgroep developers. 
 
+- Het mag een soort hackerspace-achtige vibe hebben.
+
 ## Kleuren
 Hiervoor de Rijkshuisstijl community gebruiken:
 https://www.rijkshuisstijl-community.nl/design-tokens/color/

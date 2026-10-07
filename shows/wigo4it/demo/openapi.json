@@ -1,0 +1,65 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Waterkeringen API",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Team Waterkeringen",
+      "email": "api@example.nl",
+      "url": "https://example.nl/waterkeringen"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.example.nl/waterkeringen"
+    }
+  ],
+  "paths": {
+    "/waterKeringen": {
+      "get": {
+        "operationId": "listWaterkeringen",
+        "summary": "Lijst van primaire waterkeringen",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Waterkering"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Waterkering": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "WK-0001"
+          },
+          "naam": {
+            "type": "string",
+            "example": "Lekdijk"
+          },
+          "type": {
+            "type": "string",
+            "example": "Dijk"
+          },
+          "categorie": {
+            "type": "string",
+            "example": "Primaire waterkering"
+          }
+        }
+      }
+    }
+  }
+}
