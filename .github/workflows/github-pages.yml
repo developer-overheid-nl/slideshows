@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
   workflow_dispatch:
 
@@ -36,9 +36,9 @@ jobs:
 
       - name: Build Marp slide deck
         run: npm run build
-        env:
-          # Please update URL if you want to use custom domain
-          URL: https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload page artifacts
         uses: actions/upload-pages-artifact@v3

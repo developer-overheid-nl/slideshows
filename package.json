@@ -5,8 +5,9 @@
   "license": "WTFPL",
   "private": true,
   "scripts": {
-    "build": "rimraf public && npm run -s deck",
-    "deck": "marp --no-stdin -I ./shows -o public && ncp ./shows public && cpx \"./themes/!(*.keep|*.css)\" public/themes",
+    "build": "rimraf public && npm run -s deck && node scripts/index.mjs",
+    "deck": "mkdir -p public && ncp ./shows public/shows && cpx \"./themes/**/!(*.keep|*.css)\" public/themes && marp --no-stdin --html -I ./shows -o public/shows && npm run -s deck:own-config",
+    "deck:own-config": "find shows -name marp.config.mjs -exec sh -c 'marp --no-stdin --html -c \"$0\" \"${0%/*}/index.md\" -o \"public/${0%/*}/index.html\"' {} \\;",
     "start": "marp -s --html .",
     "pdf": "marp --pdf --browser-path chromium ./index.md --allow-local-files --theme ../../themes/don_main.css",
     "pptx": "marp --pptx --browser-path chromium ./index.md --allow-local-files --theme ../../themes/don_main.css",
