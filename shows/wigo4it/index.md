@@ -22,11 +22,7 @@ lang: nl
 
 <!--
 
-Dankjewel Maurice. Ik wil graag inhaken op wat je eerder noemde, de standaard meetmethoden. 
-In het geval van mijn doelgroep, developers is dat namelijk een nog logischere stap dan in andere vakgebieden.
-In ons geval heten die meetinstrumenten eerder "tools" of "linters" of "checkers".
-Ik ga de rest van deze presentatie gebruiken om uit te leggen hoe developers werken en wat we daarvan kunnen 
-leren als het gaat om de compliance van standaarden.
+
 
 -->
 
@@ -62,9 +58,22 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 ## How did i get here?
 
-- 😷 Bron- en contactonderzoek  [COVID-19]
+- 😷 Bron- en contactonderzoek [COVID-19]
+- 📝 Vragenlijsten en formulieren
 - 📋 Informeren/ statistieken
 - ⚕️ Ministerie van Volksgezondheid, Welzijn en Sport
+
+## Agenda
+
+<!-- _class: invert -->
+
+1. Waarom standaardiseren?
+2. developer.overheid.nl & de kennisbank
+3. Open source en `publiccode.yml`
+4. API's: catalogus, API Design Rules en de `don-checker`
+5. AI skills voor overheidsstandaarden
+6. In BETA: Schema-register
+7. Vraag aan jullie & events
 
 ## Hoe werken we samen?
 
@@ -81,9 +90,29 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 <!--
 
+-->
+
+
+## Standaardisering
+
+<div class="two-columns">
+  <ul>
+    <li>Voorkomt discussies</li>
+    <li>1 overheid</li>
+    <li>Voorspelbaarheid</li>
+    <li>Makkelijker ontsluiten</li>
+    <li>Makkelijker tooling bouwen</li>
+  </ul>
+  <div>
+    <img src="./img/usb.png" alt="USB-C kabel" style="max-height: 480px; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<!-- 
 
 
 -->
+
 
 ## developer.overheid.nl
 
@@ -98,6 +127,12 @@ Bottom up
 Open Source
 Dus als je een foutje ziet, file an issue
 Wil je een feature? Draag ook een issue aan 
+
+Vanuit de overheid worden hoge eisen aan software gesteld
+Er zijn veel standaarden, echter niet voldoende tooling om iteratief te checken
+Dit bouwen wij!
+De sweet spot is dus: handige tools leveren aan developers, zodat ze makkelijker kunnen werken
+maar waardoor ze ook direct compliant zijn aan de standaarden!
 
 -->
 
@@ -126,6 +161,114 @@ Metadata op basis van publiccode.yml
 
 -->
 
+## 🪄 publiccode.yml
+
+<div class="two-columns">
+  <ul>
+    <li>Metadata-standaard voor open source van de overheid</li>
+    <li>In 2018 ontstaan in Italië</li>
+    <li>Eén YAML-bestand in de root van je repo</li>
+    <li>Werkt op elk Git-platform</li>
+    <li>Gebruikt door catalogi in 🇮🇹 🇫🇷 🇩🇪 🇳🇱</li>
+  </ul>
+  <div>
+    <img src="./img/boeken.png" alt="Voorbeeld van een publiccode.yml" style="max-height: 480px; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<!--
+
+Dit is de bron van de Open Source Catalogus die je net zag.
+Het bestand werkt als een vlag: "dit is overheidssoftware, en je mag het hergebruiken".
+Het is machineleesbaar, dus catalogi kunnen het automatisch oppikken.
+
+-->
+
+## Hoe ziet dat eruit?
+
+<!-- _class: invert -->
+
+```yml
+publiccodeYmlVersion: "0.7"
+name: don-checker
+url: "https://github.com/developer-overheid-nl/don-checker"
+softwareType: standalone/other
+developmentStatus: stable
+platforms: [web, linux]
+
+organisation:
+  uri: "https://developer.overheid.nl"
+  name: developer.overheid.nl
+
+supports:
+  - id: https://gitdocumentatie.logius.nl/publicatie/api/adr/
+
+description:
+  nl:
+    shortDescription: Controleer je API tegen de API Design Rules
+    longDescription: >
+      ...
+    features:
+      - Linter voor OpenAPI-specificaties
+      - Te draaien in CI
+
+legal:
+  license: EUPL-1.2
+
+maintenance:
+  type: internal
+  contacts:
+    - name: Team developer.overheid.nl
+
+localisation:
+  localisationReady: false
+  availableLanguages: [nl]
+```
+
+<!--
+
+Naam, URL, status, licentie, onderhoud: dat is eigenlijk alles.
+De longDescription is ingekort voor de slide.
+
+Nieuw sinds 0.5: `organisation` (wie publiceert de software, met een URI).
+Nieuw in 0.7: `supports`, welke standaarden/regelgeving de software ondersteunt
+(hier de API Design Rules). Vervangt de landspecifieke secties.
+
+-->
+
+## Waarom zou je het doen?
+
+<!-- _class: invert -->
+
+- **Vindbaar**: je project komt in de Open Source Catalogus
+- **Hergebruik**: andere organisaties ontdekken wat al bestaat
+- **Context**: status, licentie en onderhoud in één oogopslag
+- **Internationaal**: dezelfde standaard in heel Europa
+- **Laagdrempelig**: één bestand, een paar minuten werk
+
+<!--
+
+Validatie kan met publiccode-parser-go, ook in je CI.
+Uitleg in de kennisbank:
+https://developer.overheid.nl/kennisbank/open-source/standaarden/publiccode-yml
+
+-->
+
+## `don-checker` voor je `publiccode.yml`
+
+<!-- _class: invert -->
+
+- Zelfde tool, andere standaard: `--standard publiccode`
+- Versies `0.5` en `0.7` (default: `0.7`)
+- Lokaal, in de web-app of in je CI (exit code ≠ 0 bij fouten)
+
+```bash
+npx @developer-overheid-nl/don-checker@latest validate \
+  --standard publiccode \
+  --input ./publiccode.yml
+```
+
+
 ## API Catalogus
 
 <img src="./img/api-cat.png" class="img-full-width">
@@ -138,6 +281,9 @@ Metadata op basis van publiccode.yml
 Dinsdag 15 december mag in de agenda's!
 
 -->
+
+
+
 
 
 ## API Design Rules
@@ -154,27 +300,6 @@ Dinsdag 15 december mag in de agenda's!
 - `/core/version-header` `API-Version` response-header
 
 
-
-## Standaardisering
-
-<div class="two-columns">
-  <ul>
-    <li>Voorkomt discussies</li>
-    <li>1 overheid</li>
-    <li>Voorspelbaarheid</li>
-    <li>Makkelijker ontsluiten</li>
-    <li>Makkelijker tooling bouwen</li>
-  </ul>
-  <div>
-    <img src="./img/usb.png" alt="USB-C kabel" style="max-height: 480px; display: block; margin: 0 auto;">
-  </div>
-</div>
-
-<!-- 
-
-
--->
-
 ## `don-checker` cli
 
 <img src="./img/don-checker.png">
@@ -187,17 +312,16 @@ Dinsdag 15 december mag in de agenda's!
 
 <!-- https://developer-overheid-nl.github.io/don-checker/ -->
 
-
-## Developers vragen het aan AI
+## AI Skills
 
 <!-- _class: invert -->
 
-- Niemand leest eerst de kennisbank, je vraagt het je AI-assistent
+- Niet genoeg mensen lezen de kennisbank, je vraagt het je AI-assistent
 - Maar die kent de Nederlandse standaarden slecht:
   - verouderde versies
   - verzonnen regels
   - Engelstalige "best practices" in plaats van NL GOV
-- **Oplossing:** breng de kennisbank naar de assistent
+- **Oplossing:** biedt de kennisbank aan in de assistent
 
 <!--
 
@@ -221,7 +345,7 @@ een willekeurige blogpost van vijf jaar geleden.
   </ul>
   <div>
 
-```text
+```sh
 skills/ls-api/
 └── SKILL.md
     ---
@@ -267,57 +391,6 @@ Let op: status concept, het zijn samenvattingen, de officiële standaard blijft 
 
 -->
 
-## Installeren
-
-<!-- _class: invert -->
-
-```bash
-# Claude Code
-claude plugin marketplace add developer-overheid-nl/skills-marketplace
-claude plugin install standaarden@overheid-plugins
-claude plugin install developer-overheid@overheid-plugins
-```
-
-**Cursor:** Settings → Plugins → Import
-→ `developer-overheid-nl/skills-marketplace`
-
-## Demo: van prompt naar linter
-
-<!-- _class: invert -->
-
-> "Maak een OAS-spec van waterkeringen, die net niet klopt, zodat ik hem kan linten met de ADR-checker"
-
-1. Assistent laadt de skill `standaarden:ls-api`
-2. Schrijft een OpenAPI-spec op basis van het Aquo-schema
-3. Draait Spectral met de DON-ruleset
-4. Repareert → **0 errors**
-
-<!--
-
-Dit is letterlijk hoe de demo-spec voor deze presentatie gemaakt is.
-De assistent wist zelf welke ruleset-URL te gebruiken en welke regels er zijn,
-omdat dat in de skill staat. Eventueel live laten zien.
-
--->
-
-## Bouw je eigen skill
-
-<!-- _class: invert -->
-
-- Jullie domeinkennis als skill: voor je eigen team én voor andere gemeenten
-- Eisen: open-source licentie, publieke repo, Nederlandse documentatie
-- Aanmelden via een issue op de marketplace
-
-`github.com/developer-overheid-nl/skills-marketplace`
-
-<!--
-
-Wigo4it heeft veel kennis van het sociaal domein en van de G4-systemen.
-Als die kennis als skill beschikbaar is, profiteren nieuwe collega's én
-andere gemeenten ervan.
-
--->
-
 
 
 ## Schema-register
@@ -336,26 +409,67 @@ Eigen schema's toevoegen kan via "Toevoegen aan het Schema-register".
 -->
 
 
-## Voorbeeld schema
+## Schemavoorbeeld: adres
 
-https://schemas.don.projects.digilab.network/schemas?q=AdresUitgebreid
+[> Naar adresUitgebreid op catalogus](https://schemas.don.projects.digilab.network/schemas?q=AdresUitgebreid)
 
-## Bijdragen
+<!-- _class: invert -->
 
-- Haak aan bij onze werkgroepen
-  - API Design Rules
-  - JSON Schema
+<style scoped>
+  pre { font-size: 0.75em; }
+  .hljs-attr { color: #8fcae7; }
+  .hljs-string { color: #f9e11e; }
+  .hljs-number, .hljs-literal { color: #ffb612; }
+</style>
+
+```json
+{
+  "title": "Adres",
+  "type": "object",
+  "properties": {
+    "openbareRuimteNaam": { "type": "string", "maxLength": 80 },
+    "huisnummer":         { "type": "integer", "minimum": 1, "maximum": 99999 },
+    "huisletter":         { "type": "string", "pattern": "^[a-zA-Z]{1}$" },
+    "postcode":           { "type": "string", "pattern": "^[1-9]{1}[0-9]{3}[A-Z]{2}$" },
+    "woonplaatsNaam":     { "type": "string", "maxLength": 80 }
+  },
+  "required": ["openbareRuimteNaam", "huisnummer", "woonplaatsNaam"]
+}
+```
+
+<!--
+
+Ingekorte versie van AdresUitgebreid (BAG, Kadaster).
+Volledige beknopte versie: shows/wigo4it/adres.schema.json
+
+-->
+
+## Vraag aan jullie!
+
+- Zet jullie API's in ons API register
+- Voeg een `publiccode.yml` toe aan jullie open source repo's
+- Draai de don-checker in jullie CI
 - Gastblogs/ artikelen
 - Issues/ Pr's
+- Sluit aan bij de werkgroep JSON Schema of ADR
+- Op termijn: schema's aanleveren?
 
 ## Events!
 
+<style scoped>
+  .event-qr { position: absolute; right: 95px; top: 170px; z-index: 3; display: flex; flex-direction: column; align-items: center; }
+  .event-qr img { background: #fff; padding: 8px; border-radius: 8px; }
+  .event-qr span { margin-top: 0.3em; font-size: 0.6em; background: #fff; padding: 0 0.4em; border-radius: 4px; }
+</style>
+
 <img src="./img/borrel.png" class="img-full-width">
 
-<!-- Zet 15 december in je agenda -->
+<div class="event-qr">
+  <img src="./img/qr-meetup.png" width="160" height="160" alt="QR-code naar de developer.overheid.nl meetup">
+  <span>Meld je aan!</span>
+</div>
 
-## Vraag aan jullie
-- Doe mee!
+<!-- Zet 15 december in je agenda -->
 
 ## Bedankt! 
 

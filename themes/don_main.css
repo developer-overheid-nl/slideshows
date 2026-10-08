@@ -105,6 +105,9 @@ section.invert h2 {
   text-align: center;
   color: white !important;
 }
+section.invert a {
+  color: var(--don-lichtblauw-200) !important;
+}
 section.title {
   color: #ffffff !important;
 }
