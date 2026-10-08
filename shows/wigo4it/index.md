@@ -7,7 +7,7 @@ footer: "![width:250px](../../themes/logo.png)"
 lang: nl
 ---
 
-# Kennisdelingschapter wigo4it: developer.overheid.nl
+# Kennisdelingschapter wigo4it developer.overheid.nl
 
 <!-- <p style="text-align: center; max-width: 60%; margin: 0 auto;">En waarom we veel meer moeten investeren in developertooling voor standaarden</p> -->
 
@@ -60,6 +60,31 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 -->
 
 
+## How did i get here?
+
+- 😷 Bron- en contactonderzoek  [COVID-19]
+- 📋 Informeren/ statistieken
+- ⚕️ Ministerie van Volksgezondheid, Welzijn en Sport
+
+## Hoe werken we samen?
+
+<div class="two-columns">
+  <ul>
+    <li>Hoe helpen we developers?</li>
+    <li>Convergentie qua werkwijze</li>
+    <li>Hogere kwaliteit</li>
+  </ul>
+  <div>
+    <img src="./img/pull-request.svg" alt="Pull request met geslaagde checks" style="max-height: 480px; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<!--
+
+
+
+-->
+
 ## developer.overheid.nl
 
 <img src="./img/screenshot_don.png" class="img-full-width">
@@ -68,8 +93,11 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 <!--
 
+Wegwijzer
 Bottom up
 Open Source
+Dus als je een foutje ziet, file an issue
+Wil je een feature? Draag ook een issue aan 
 
 -->
 
@@ -105,27 +133,27 @@ Metadata op basis van publiccode.yml
 
 <!-- _class: invert -->
 
-
-<!-- _class: invert -->
-
 <!-- 
 
 Dinsdag 15 december mag in de agenda's!
 
 -->
 
+
 ## API Design Rules
 
-- `/core/doc-openapi-contact`: contactinformatie in de OAS
-- `/core/doc-openapi`: beschrijf de API met OpenAPI
-- `/core/http-methods`: alleen standaard HTTP-methods
-- `/core/no-trailing-slash`: geen trailing slash in paden
-- `/core/publish-openapi`: publiceer `/openapi.json`
-- `/core/semver`: Semantic Versioning
-- `/core/uri-version`: major versie in de URI (`/v1`)
-- `/core/version-header`: `API-Version` response-header
+<!-- _class: invert code-list -->
 
-<!-- _class: invert -->
+- `/core/doc-openapi-contact` contactinformatie in de OAS
+- `/core/doc-openapi` beschrijf de API met OpenAPI
+- `/core/http-methods` alleen standaard HTTP-methods
+- `/core/no-trailing-slash` geen trailing slash in paden
+- `/core/publish-openapi` publiceer `/openapi.json`
+- `/core/semver` Semantic Versioning
+- `/core/uri-version` major versie in de URI (`/v1`)
+- `/core/version-header` `API-Version` response-header
+
+
 
 ## Standaardisering
 
@@ -135,14 +163,30 @@ Dinsdag 15 december mag in de agenda's!
     <li>1 overheid</li>
     <li>Voorspelbaarheid</li>
     <li>Makkelijker ontsluiten</li>
-    <li>Tooling bouwen</li>
+    <li>Makkelijker tooling bouwen</li>
   </ul>
   <div>
-    <img src="./img/usb-c.svg" alt="USB-C kabel" style="max-height: 480px; display: block; margin: 0 auto;">
+    <img src="./img/usb.png" alt="USB-C kabel" style="max-height: 480px; display: block; margin: 0 auto;">
   </div>
 </div>
 
-## `don-checker`
+<!-- 
+
+
+-->
+
+## `don-checker` cli
+
+<img src="./img/don-checker.png">
+
+## `don-checker` web-app
+
+<img src="./img/don-checker-web.png" class="img-full-width">
+
+<!-- _class: invert -->
+
+<!-- https://developer-overheid-nl.github.io/don-checker/ -->
+
 
 ## Developers vragen het aan AI
 
@@ -275,9 +319,34 @@ andere gemeenten ervan.
 -->
 
 
+
+## Schema-register
+
+<img src="./img/schema-register.png" class="img-centered img-md-width">
+
+<!-- _class: invert -->
+
+<!--
+
+https://schemas.don.projects.digilab.network
+Alle JSON Schemas van de overheid op één plek: ruim 4.200 schema's.
+Zoeken en filteren op type en dialect, per schema een health-score.
+Eigen schema's toevoegen kan via "Toevoegen aan het Schema-register".
+
+-->
+
+
+## Voorbeeld schema
+
+https://schemas.don.projects.digilab.network/schemas?q=AdresUitgebreid
+
 ## Bijdragen
 
-
+- Haak aan bij onze werkgroepen
+  - API Design Rules
+  - JSON Schema
+- Gastblogs/ artikelen
+- Issues/ Pr's
 
 ## Events!
 

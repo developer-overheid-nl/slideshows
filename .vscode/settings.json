@@ -1,7 +1,7 @@
 // Add paths to enable custom themes in Markdown preview for VS Code extension.
 // https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 {
-  "markdown.marp.themes": ["./themes/don.css"],
+  "markdown.marp.themes": ["./themes/don.css", "./themes/don_main.css"],
   "files.associations": {
     "*.md": "html",
   }

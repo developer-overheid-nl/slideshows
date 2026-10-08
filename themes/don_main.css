@@ -135,6 +135,13 @@ section img.img-full-width {
   max-height: 800px;
   margin: 0 auto;
 }
+
+section img.img-md-width {
+  display: block;
+  max-height: 600px;
+  margin: 0 auto;
+}
+
 section img.img-centered {
   display: block;
   margin: 0 auto;
@@ -313,4 +320,18 @@ section.invert figcaption {
 marp-pre{
   position: relative;
   z-index: 2;
+}
+/* Lijst met code-items (bijv. /core/semver) als witte code-labels.
+   Werkt op een slide (<!-- _class: code-list -->), een wrapper
+   (<div class="code-list">) of een lijst (<ul class="code-list">). */
+
+section.code-list li > code:first-child,
+.code-list li > code:first-child {
+  font-family: "Liberation Mono", monospace;
+  background-color: #ffffff;
+  color: #154273;
+  font-weight: 700;
+  padding: 0.1em 0.45em;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.25);
 }
