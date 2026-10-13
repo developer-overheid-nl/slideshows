@@ -15,7 +15,7 @@ header: "Header"
   <li>Open Source Summit Europe</li>
   <li>27 August 2025</li>
 </ul>
-
+<!--  -->
 <!--
 
 - So I know you guys have been in this situation:
