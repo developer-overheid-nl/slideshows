@@ -62,18 +62,45 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 - 📝 Vragenlijsten en formulieren
 - 📋 Informeren/ statistieken
 - ⚕️ Ministerie van Volksgezondheid, Welzijn en Sport
+- 📖 Geen interne docs!
 
 ## Agenda
 
 <!-- _class: invert -->
 
+1. developer.overheid.nl & de kennisbank
 1. Waarom standaardiseren?
-2. developer.overheid.nl & de kennisbank
-3. Open source en `publiccode.yml`
-4. API's: catalogus, API Design Rules en de `don-checker`
-5. AI skills voor overheidsstandaarden
-6. In BETA: Schema-register
-7. Vraag aan jullie & events
+1. Open source en `publiccode.yml`
+1. API's: catalogus, API Design Rules en de `don-checker`
+1. AI skills voor overheidsstandaarden
+1. In BETA: Schema-register
+1. Vraag aan jullie & events
+
+## developer.overheid.nl
+
+<img src="./img/screenshot_don.png" class="img-full-width">
+
+<!-- _class: invert -->
+
+<!--
+
+Wegwijzer
+Bottom up
+Open Source
+Veel van onze energie steken we in community building en events
+We brengen mensen liever bij elkaar dan dat we zelf bepalen
+hoe iets gebouwd moet worden
+Dus als je een foutje ziet, file an issue
+Wil je een feature? Draag ook een issue aan 
+
+Vanuit de overheid worden hoge eisen aan software gesteld
+Er zijn veel standaarden, er is alleen geen goede tooling voor elke
+standaard beschikbaar om te checken of je voldoet aan die standaard.
+Deze tooling bouwen wij! De sweet spot is dus: handige tools leveren
+aan developers, zodat ze makkelijker kunnen werken maar waardoor ze 
+ook direct compliant zijn aan de standaarden!
+
+-->
 
 ## Hoe werken we samen?
 
@@ -90,8 +117,10 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 <!--
 
--->
+Wat ik al eerder zei bij m'n introductie, met deze vraag houden we ons bezig
+bij developer.overheid.nl.
 
+-->
 
 ## Standaardisering
 
@@ -109,30 +138,6 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 </div>
 
 <!-- 
-
-
--->
-
-
-## developer.overheid.nl
-
-<img src="./img/screenshot_don.png" class="img-full-width">
-
-<!-- _class: invert -->
-
-<!--
-
-Wegwijzer
-Bottom up
-Open Source
-Dus als je een foutje ziet, file an issue
-Wil je een feature? Draag ook een issue aan 
-
-Vanuit de overheid worden hoge eisen aan software gesteld
-Er zijn veel standaarden, echter niet voldoende tooling om iteratief te checken
-Dit bouwen wij!
-De sweet spot is dus: handige tools leveren aan developers, zodat ze makkelijker kunnen werken
-maar waardoor ze ook direct compliant zijn aan de standaarden!
 
 -->
 
@@ -161,14 +166,21 @@ Metadata op basis van publiccode.yml
 
 -->
 
+## Open Source Catalogus
+
+<!-- _class: invert -->
+
+<img src="./img/oss-detail.png" class="img-full-width">
+
+
 ## 🪄 publiccode.yml
 
 <div class="two-columns">
   <ul>
     <li>Metadata-standaard voor open source van de overheid</li>
     <li>In 2018 ontstaan in Italië</li>
-    <li>Eén YAML-bestand in de root van je repo</li>
-    <li>Werkt op elk Git-platform</li>
+    <li>Eén YAML-bestand root van je repo</li>
+    <li>Makkelijk migreren van git-platform</li>
     <li>Gebruikt door catalogi in 🇮🇹 🇫🇷 🇩🇪 🇳🇱</li>
   </ul>
   <div>
@@ -236,15 +248,15 @@ Nieuw in 0.7: `supports`, welke standaarden/regelgeving de software ondersteunt
 
 -->
 
-## Waarom zou je het doen?
+## Waarom toevoegen?
 
 <!-- _class: invert -->
 
-- **Vindbaar**: je project komt in de Open Source Catalogus
-- **Hergebruik**: andere organisaties ontdekken wat al bestaat
-- **Context**: status, licentie en onderhoud in één oogopslag
-- **Internationaal**: dezelfde standaard in heel Europa
-- **Laagdrempelig**: één bestand, een paar minuten werk
+- **Vindbaar**: fungeert als flag
+- **Hergebruik**: ontdekken wat al bestaat
+- **Context**: het project één oogopslag
+- **Europees**: gezamenlijke standaard
+- **Laagdrempelig**: één bestand, tien minuten werk
 
 <!--
 
@@ -257,10 +269,7 @@ https://developer.overheid.nl/kennisbank/open-source/standaarden/publiccode-yml
 ## `don-checker` voor je `publiccode.yml`
 
 <!-- _class: invert -->
-
-- Zelfde tool, andere standaard: `--standard publiccode`
-- Versies `0.5` en `0.7` (default: `0.7`)
-- Lokaal, in de web-app of in je CI (exit code ≠ 0 bij fouten)
+CLI, Web-app of CI/CD
 
 ```bash
 npx @developer-overheid-nl/don-checker@latest validate \
@@ -317,10 +326,7 @@ Dinsdag 15 december mag in de agenda's!
 <!-- _class: invert -->
 
 - Niet genoeg mensen lezen de kennisbank, je vraagt het je AI-assistent
-- Maar die kent de Nederlandse standaarden slecht:
-  - verouderde versies
-  - verzonnen regels
-  - Engelstalige "best practices" in plaats van NL GOV
+- Maar die kent de Nederlandse standaarden niet of slecht
 - **Oplossing:** biedt de kennisbank aan in de assistent
 
 <!--
@@ -339,6 +345,7 @@ een willekeurige blogpost van vijf jaar geleden.
 <div class="two-columns">
   <ul>
     <li>Pakketje kennis + instructies voor een AI-assistent</li>
+    <li>AI-aanbieder agnostisch</li>
     <li>Gewone markdown in een Git-repo</li>
     <li>Wordt automatisch geladen als het onderwerp langskomt</li>
     <li>Open source, dus te reviewen en verbeteren</li>
@@ -475,5 +482,5 @@ Volledige beknopte versie: shows/wigo4it/adres.schema.json
 
 Vragen?
 
-🐘 [@tomootes](https://social.codefor.nl/@tomootes)
+🐘 [social.codefor.nl/@tomootes](https://social.codefor.nl/@tomootes)
 📬 t.ootes@geonovum.nl
