@@ -2,7 +2,10 @@
 // https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 {
   "markdown.marp.themes": ["./themes/don.css", "./themes/don_main.css"],
-  "files.associations": {
-    "*.md": "html",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100
   }
 }

@@ -66,6 +66,13 @@ section h2 {
   padding-top: 10px;
   padding-bottom: 0px;
 }
+/* Titels zijn al bold en Liberation Mono heeft geen zwaardere variant: accentueer met kleur. */
+section h2 strong {
+  color: #007bc7;
+}
+section.invert h2 strong {
+  color: var(--don-lichtblauw-200);
+}
 
 section footer {
   position: absolute !important;
@@ -337,4 +344,285 @@ section.code-list li > code:first-child,
   padding: 0.1em 0.45em;
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(15, 23, 42, 0.25);
+}
+
+/* Grote, centrale vraag op een eigen slide.
+   Gebruik: <!-- _class: invert question --> met de vraag als alinea onder de h2. */
+section.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+section.question::before {
+  content: "?";
+  position: absolute;
+  right: -40px;
+  bottom: -160px;
+  font-family: "Liberation Mono", monospace;
+  font-weight: bold;
+  font-size: 640px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.08);
+  z-index: 0;
+}
+section.question h2 {
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.8em;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--don-lichtblauw-200) !important;
+}
+section.question h2::before {
+  content: "// ";
+  opacity: 0.6;
+}
+section.question p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-family: "Liberation Mono", monospace;
+  font-weight: bold;
+  font-size: 2.6em;
+  line-height: 1.2;
+  color: #ffffff;
+}
+section.question p::after {
+  content: "_";
+  margin-left: 0.1em;
+  color: var(--don-lichtblauw-200);
+  /* animation: question-cursor 1s steps(1) infinite; */
+}
+@keyframes question-cursor {
+  50% { opacity: 0; }
+}
+
+/* Feestelijke slide met regenboogtitel op een donkere "hackerspace"-achtergrond.
+   Gebruik: <!-- _class: rainbow --> */
+section.rainbow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #e2e8f0;
+  background-color: #0b1020 !important;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255, 0, 128, 0.25), transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(0, 200, 255, 0.25), transparent 35%),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+/* section::after is bezet door Marp's paginering, dus de raket hangt aan de header. */
+section.rainbow::before,
+section.rainbow header::after {
+  position: absolute;
+  font-size: 64px;
+  z-index: 0;
+  animation: rainbow-float 3s ease-in-out infinite;
+}
+section.rainbow::before {
+  content: "🌈";
+  left: 90px;
+  top: 130px;
+  transform: rotate(-12deg);
+}
+section.rainbow header::after {
+  content: "👾";
+  right: 110px;
+  top: 520px;
+  animation-delay: 1.5s;
+}
+section.rainbow h2 {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0 0 2rem;
+  font-size: 2.4em;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg,
+    #ff3b3b, #ff9f1a, #ffe600, #3ee06f, #00c8ff, #6a5cff, #ff4fd8, #ff3b3b);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  filter: drop-shadow(0 0 18px rgba(255, 79, 216, 0.45));
+  animation: rainbow-shift 4s linear infinite;
+}
+section.rainbow ul {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  padding: 0 !important;
+  font-family: "Liberation Mono", monospace;
+}
+section.rainbow li {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+section.rainbow footer img {
+  filter: brightness(0) invert(1);
+}
+@keyframes rainbow-shift {
+  to { background-position: 200% center; }
+}
+@keyframes rainbow-float {
+  50% { translate: 0 -14px; }
+}
+
+/* Gecentreerde slidetitel. Gebruik: <!-- _class: title-center --> */
+section.title-center h2 {
+  text-align: center;
+}
+
+/* Links uitgelijnde slidetitel, ook op invert-slides. Gebruik: <!-- _class: title-left --> */
+section.title-left h2 {
+  text-align: left;
+}
+
+/* Kleinere lijsttekst, bv. naast een grote afbeelding. Gebruik: <!-- _class: list-text-small --> */
+section.list-text-small ul,
+section.list-text-small ol {
+  font-size: 0.8em;
+}
+section.list-text-small li {
+  margin-bottom: 0.4em;
+}
+
+/* Kleinere slidetitel, bv. bij een lange titel naast een afbeelding. Gebruik: <!-- _class: title-small --> */
+section.title-small h2 {
+  font-size: 0.9em;
+}
+
+/* Antwoorden als genummerde kaarten naast elkaar; past bij de question-slide.
+   Gebruik: <!-- _class: invert answers --> met een lijst van (twee of drie) antwoorden. */
+section.answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.answers h2 {
+  padding: 0;
+  margin: 0 0 2.5rem;
+  font-size: 0.8em;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--don-lichtblauw-200) !important;
+}
+section.answers h2::before {
+  content: "// ";
+  opacity: 0.6;
+}
+section.answers ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0 !important;
+  list-style: none;
+  counter-reset: answer;
+}
+section.answers li {
+  counter-increment: answer;
+  margin: 0;
+  padding: 1.6rem 1.6rem 1.8rem;
+  border-radius: 8px;
+  border-top: 8px solid #154273;
+  background-color: #ffffff;
+  color: #154273;
+  font-family: "Liberation Mono", monospace;
+  font-weight: bold;
+  font-size: .75em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  box-shadow: 0 12px 30px rgba(21, 66, 115, 0.35);
+}
+section.answers li::before {
+  content: counter(answer, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 2.2em;
+  color: #017bc6;
+}
+
+/* Ambities van de overheid als raster van genummerde doel-kaarten.
+   Gebruik: <!-- _class: ambitions --> met een lijst van ambities. */
+section.ambitions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.ambitions h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0 0 2rem;
+  color: #154273;
+}
+section.ambitions h2::after {
+  content: "🏛️ van de overheid";
+  padding: 0.35em 0.9em;
+  border-radius: 999px;
+  background-color: #154273;
+  color: #ffffff;
+  font-size: 0.45em;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+section.ambitions ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0 !important;
+  list-style: none;
+  counter-reset: ambition;
+}
+section.ambitions li {
+  counter-increment: ambition;
+  position: relative;
+  margin: 0;
+  padding: 1.1rem 1.5rem 1.2rem 4.2rem;
+  border-left: 6px solid #154273;
+  border-radius: 6px;
+  background-color: var(--don-lichtblauw-200);
+  color: #154273;
+  font-weight: bold;
+  line-height: 1.3;
+}
+section.ambitions li::before {
+  content: "◎";
+  position: absolute;
+  left: 1.3rem;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.6em;
+  color: #017bc6;
+}
+section.ambitions li::after {
+  content: "ambitie " counter(ambition, decimal-leading-zero);
+  display: block;
+  order: -1;
+  margin-top: 0.2rem;
+  font-family: "Liberation Mono", monospace;
+  font-size: 0.55em;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #017bc6;
 }
