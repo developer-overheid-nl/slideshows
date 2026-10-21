@@ -31,8 +31,8 @@
   font-style: italic;
 }
 
-:root{
-  --font-size-xs: .675rem;
+:root {
+  --font-size-xs: 0.675rem;
   --don-lichtblauw-200: #cce7f4;
 }
 
@@ -51,7 +51,6 @@ section header {
   content: "";
   color: white;
 }
-
 
 section h1,
 section h2,
@@ -128,7 +127,8 @@ section.title h1 {
 section.title h1 code {
   color: white;
 }
-section h1, section.title h2 {
+section h1,
+section.title h2 {
   padding-top: 80px;
   color: #ffffff !important;
   text-align: center;
@@ -174,11 +174,11 @@ section.page-image-only {
   padding-bottom: 0;
 }
 
-section.page-image-only h2{
+section.page-image-only h2 {
   display: none;
 }
 
-.horizontal-list{
+.horizontal-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +197,7 @@ section.page-image-only h2{
   color: white;
 }
 
-.two-columns{
+.two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -209,52 +209,64 @@ section.page-image-only h2{
   content: "";
 }
 
-.horizontal-list li::after&last-child{
+.horizontal-list li::after&last-child {
   /* content: ""; */
 }
 
-.grid-four-columns{
+.grid-four-columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* background-color: red; */
   grid-gap: 1rem;
 }
 
-
-#how-did-i-get-here{
+#how-did-i-get-here {
   margin-top: 1rem;
 }
 
-.mb-0{
+.mb-0 {
   margin-bottom: 0 !important;
 }
 
-.pt-0{
+.pt-0 {
   padding-top: 0 !important;
 }
 
-.flex-center{
-  display: flex; justify-content: center; width: 100%;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   /* font-size: 40px; */
-  }
+}
 
-.lotr-ring{
-  display: flex; flex-direction: row; justify-content: center; width: 100%;
+.lotr-ring {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 .lotr-ring p {
-  text-align: center; font-size: 3rem; position: absolute; left: 50%; top: 50%; margin-left: -30px;
+  text-align: center;
+  font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
 }
 
-.one-third{
-  display: flex; flex-direction: row; align-items: flex-end; width: 100%;
-  .right{
+.one-third {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  .right {
     margin-left: 1rem;
   }
 }
 
-.card-border{
-  border: solid #CBD5E1 2px;
+.card-border {
+  border: solid #cbd5e1 2px;
 }
 
 quote {
@@ -322,12 +334,12 @@ section.invert figcaption {
 }
 
 .spell-error {
-  text-decoration: underline wavy #B3261E;
+  text-decoration: underline wavy #b3261e;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
-marp-pre{
+marp-pre {
   position: relative;
   z-index: 2;
 }
@@ -398,7 +410,9 @@ section.question p::after {
   /* animation: question-cursor 1s steps(1) infinite; */
 }
 @keyframes question-cursor {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Feestelijke slide met regenboogtitel op een donkere "hackerspace"-achtergrond.
@@ -417,7 +431,11 @@ section.rainbow {
     radial-gradient(circle at 85% 80%, rgba(0, 200, 255, 0.25), transparent 35%),
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-size:
+    100% 100%,
+    100% 100%,
+    40px 40px,
+    40px 40px;
 }
 /* section::after is bezet door Marp's paginering, dus de raket hangt aan de header. */
 section.rainbow::before,
@@ -447,8 +465,17 @@ section.rainbow h2 {
   font-size: 2.4em;
   font-weight: bold;
   letter-spacing: -0.02em;
-  background: linear-gradient(90deg,
-    #ff3b3b, #ff9f1a, #ffe600, #3ee06f, #00c8ff, #6a5cff, #ff4fd8, #ff3b3b);
+  background: linear-gradient(
+    90deg,
+    #ff3b3b,
+    #ff9f1a,
+    #ffe600,
+    #3ee06f,
+    #00c8ff,
+    #6a5cff,
+    #ff4fd8,
+    #ff3b3b
+  );
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -475,10 +502,14 @@ section.rainbow footer img {
   filter: brightness(0) invert(1);
 }
 @keyframes rainbow-shift {
-  to { background-position: 200% center; }
+  to {
+    background-position: 200% center;
+  }
 }
 @keyframes rainbow-float {
-  50% { translate: 0 -14px; }
+  50% {
+    translate: 0 -14px;
+  }
 }
 
 /* Gecentreerde slidetitel. Gebruik: <!-- _class: title-center --> */
@@ -545,7 +576,7 @@ section.answers li {
   color: #154273;
   font-family: "Liberation Mono", monospace;
   font-weight: bold;
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 1.3;
   overflow-wrap: anywhere;
   box-shadow: 0 12px 30px rgba(21, 66, 115, 0.35);
@@ -625,4 +656,95 @@ section.ambitions li::after {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #017bc6;
+}
+
+/* Titelslide als node-REPL in een terminalvenster op een Rijksblauw raster.
+   Gebruik: <!-- _class: title invert title-terminal --> met een h1 (evt. met <span class="eq">)
+   en daaronder de horizontal-list met spreker/datum. */
+section.title-terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #154273 !important;
+  background-image:
+    radial-gradient(circle at 18% 25%, rgba(0, 123, 199, 0.55), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(118, 210, 182, 0.18), transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    40px 40px,
+    40px 40px;
+}
+/* Het venster zelf: Ptyxis (standaardterminal van Ubuntu 26.04) met Yaru-dark headerbar.
+   De headerbar bestaat uit achtergrondlagen: knoppen rechts, titel, "+"-tab links, balk. */
+section.title-terminal h1 {
+  position: relative;
+  margin: 1.5rem 0 0;
+  padding: calc(46px + 2.2rem) 2.4rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background-color: #1e1e1e;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='156' height='46'%3E%3Cg stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round' fill='none'%3E%3Cpath d='M14 17h14M14 23h14M14 29h14'/%3E%3Ccircle cx='66' cy='23' r='12' fill='%23ffffff' fill-opacity='0.1' stroke='none'/%3E%3Cpath d='M61.5 26.5h9'/%3E%3Ccircle cx='98' cy='23' r='12' fill='%23ffffff' fill-opacity='0.1' stroke='none'/%3E%3Crect x='93.5' y='18.5' width='9' height='9' rx='1'/%3E%3Ccircle cx='130' cy='23' r='12' fill='%23e95420' stroke='none'/%3E%3Cpath d='M126 19l8 8M134 19l-8 8'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='46'%3E%3Ctext x='300' y='28.5' text-anchor='middle' font-family='Ubuntu Sans, Ubuntu, Cantarell, sans-serif' font-weight='700' font-size='15' fill='%23ffffff'%3Etom@developer.overheid.nl: ~%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46'%3E%3Cpath d='M23 16v14M16 23h14' stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"),
+    linear-gradient(#303030, #303030);
+  background-position:
+    right 4px top,
+    center top,
+    left 6px top,
+    top;
+  background-size:
+    156px 46px,
+    600px 46px,
+    46px 46px,
+    100% 46px;
+  background-repeat: no-repeat;
+  box-shadow:
+    inset 0 -1px 0 transparent,
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
+  font-family: "Ubuntu Sans Mono", "Ubuntu Mono", "Liberation Mono", monospace;
+  font-size: 1.75em;
+  text-align: left;
+  white-space: nowrap;
+}
+/* Ubuntu's standaard bash-prompt: user@host groen, pad blauw. Het kleurwissel gaat via
+   een gradient in ch-eenheden, dus de lengtes moeten kloppen met de tekst. */
+section.title-terminal h1::before {
+  content: "tom@developer.overheid.nl:~$ node";
+  display: block;
+  width: max-content;
+  margin-bottom: 1.2rem;
+  font-size: 0.4em;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #33da7a 25ch,
+    #ffffff 25ch 26ch,
+    #5294e2 26ch 27ch,
+    #ffffff 27ch
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+section.title-terminal h1 .prompt {
+  color: #9a9996;
+  font-weight: normal;
+}
+section.title-terminal h1 .eq {
+  color: #e95420;
+}
+section.title-terminal .horizontal-list {
+  margin-top: 1rem !important;
+}
+section.title-terminal .horizontal-list li {
+  font-size: 0.6rem !important;
 }

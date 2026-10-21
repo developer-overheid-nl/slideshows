@@ -7,24 +7,30 @@ footer: "![width:250px](../../themes/logo.png)"
 lang: nl
 ---
 
-# Standaardiseren == samenwerken
+![bg](./img/Presentatiescherm.jpg)
 
-<!-- _class: title invert -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
 
-<ul class="horizontal-list" style="margin-top: 3rem;">
+# <span class="prompt">&gt;</span> standaardiseren <span class="eq">==</span> samenwerken
+
+<!-- _class: title invert title-terminal -->
+
+<ul class="horizontal-list">
   <li>Tom Ootes</li>
   <li>🐘 <a href="https://social.codefor.nl/@tomootes">@tomootes</a></li>
-  <li>Utrecht</li>
+  <li>Tweakers dev summit</li>
+  <li>De Fabrique, Utrecht</li>
   <li>28 oktober 2026</li>
 </ul>
 
-
 <!--
 
-In deze presentatie wil ik jullie graag meenemen in de ervaringen die ik heb
-opgedaan tijdens mijn werk afgelopen jaren. Ik begon als developer die wars was
-van conventies en linters, het voelde alsof mij iets werd opgelegd terwijl
-niemand mij kon uitleggen waarom dat precies zo was.
+- Leuk dat ik hier mag vertellen over DON
+- Grapje dat ik hier aan de overkant van het kanaal woon
+- Vertellen over alle inzichten van DON afgelopen jaren
+- Mooie tools die hieruit voort zijn gekomen
 
 De afgelopen jaren ben ik standaarden gaan zien als een manier van samenwerken,
 van afspraken die je maakt als je bijvoorbeeld een API bouwt of een front-end.
@@ -70,18 +76,89 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 <!-- _class: invert -->
 
 - developer.overheid.nl
-- mijn ervaringen met standaarden
-  - ADR
-  - Publiccode.yml / solving Open Source catalogs
+- Mijn verhaal: COVID-19 bij VWS
+- Het overheidslandschap: eilandjes maar gedeelde taken
+- Standaarden: pas toe of leg uit
+- Strategie: goede tooling
+- Vragen
 
-## COVID-19: bron- en contactonderzoek software
+<!--
+Even wat we gaan doen: eerst kort wat developer.overheid.nl is. Dan hoe ik er
+terechtkwam, via mijn werk bij VWS tijdens corona. Daarna het overheidslandschap
+en waarom standaardiseren zo lastig is. En tot slot onze strategie: tooling die
+zo goed is dat je vanzelf compliant wordt.
+-->
 
-<!-- _class: invert -->
+##
 
-- ⚕️ Ministerie van Volksgezondheid, Welzijn en Sport
-- 😷 Bron- en contactonderzoek [COVID-19]
-- 📝 Vragenlijsten en formulieren
-- 📋 Informeren/ statistieken
+<!-- _class: page-image-only -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](./img/homepage.png)
+
+<!--
+Eerst kort wat developer.overheid.nl is, want daar kom ik vandaan.
+
+Het is een developerportaal voor de hele overheid. Denk aan de developer-docs die je kent van grote platforms, alleen dan voor honderden organisaties tegelijk.
+
+- Een API-register: welke API's zijn er bij de overheid, met documentatie, en we checken of ze voldoen aan de API Design Rules.
+- Een open source-register op basis van publiccode.yml: welke software is er al, wie gebruikt het, zodat je niet opnieuw het wiel uitvindt.
+- Een kennisbank over API's, open source en front-end.
+
+En we zijn zelf ook open source: alles staat op GitHub, en iedereen mag meedoen.
+
+We leggen niets op. We proberen het makkelijk te maken. Daar gaat deze talk over.
+-->
+
+## API-register
+
+<!-- _class: page-image-only -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](./img/api-catalogus.png)
+
+<!--
+Het API-register: alle API's van de overheid op één plek, 322 op dit moment. Elke API krijgt een ADR-score: hoe goed volgt hij de API Design Rules. Daar kom ik straks op terug.
+-->
+
+## Open Source Register
+
+<!-- _class: page-image-only -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](./img/oss-catalogus.png)
+
+<!--
+Het Open Source Register: open source repositories van de overheid, op basis van publiccode.yml. Zo zie je welke software er al is en wie er nog meer aan werkt.
+-->
+
+## Blog
+
+<!-- _class: page-image-only -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](./img/blog.png)
+
+<!--
+En een blog, met technische posts van ons en van andere overheidsteams.
+-->
+
+## COVID-19: VWS
+
+<!-- _class: invert title-left -->
+
+- Ministerie van Volksgezondheid, Welzijn en Sport
+- Bron- en contactonderzoek
+- Vragenlijsten en formulieren
+- Informeren/ statistieken
 
 <!--
 Voordat ik bij developer.overheid.nl begon, werkte ik als freelancer bij VWS.
@@ -96,7 +173,7 @@ vragenlijsten en formulieren, en het informeren van burgers met statistieken.
 - Veel beleidswijzigingen
 - Inhouse was iets nieuws
 - Elk team zijn eigen stack
-- 📖 Geen docs
+- 📖 Geen interne docs
 
 ![bg brightness:0.55](./img/good_bad_ugly.png)
 
@@ -112,24 +189,25 @@ Ja, het voelde als developer dus gek om in die context ook te bouwen, omdat er n
 
 ## Waarom is er niks centraals?
 
-- Meest logisch?
+<!-- _class: title-left invert -->
 
-## Project: developer.overheid.nl
+![bg brightness:0.55](./img/tumbleweed.png)
+
+## developer.overheid.nl
 
 <!-- _class: rainbow -->
 
-<!-- 
+<!--
 
 Nou nadat mijn project bij min-vws afliep was ik dus heel erg bezig met deze vraag. Dat was het moment waarop ik tegen developer.overheid.nl aanliep. Destijds was het nog een stuk minder volledig dan het nu is, alleen het concept van een gedeeld developer portaal sprak me heel erg aan.
 
  -->
 
-## Zette me aan het denken
+## De vraag
 
 <!-- _class: invert question -->
 
 Hoe maken we de overheid beter op digitaal vlak?
-
 
 ## Het overheidslandschap
 
@@ -137,10 +215,13 @@ Hoe maken we de overheid beter op digitaal vlak?
 
 Eilandjes > 1 ecosysteem
 
-<!-- Tijdens mijn werk kwam ik erachter dat overheidsorganisaties eerder functioneren
- als aparte eilandjes dan als een ecosysteem. Elke organisatie waarmee ik praatte 
- hadden en andere tech-stack. -->
+<!--
 
+Tijdens mijn werk kwam ik erachter dat overheidsorganisaties eerder functioneren
+ als aparte eilandjes dan als een ecosysteem. Elke organisatie waarmee ik praatte
+ hadden en andere tech-stack.
+
+ -->
 
 ## 👥 Dezelfde uitvoeringstaken!
 
@@ -149,41 +230,40 @@ Eilandjes > 1 ecosysteem
 - Woo: openbaarmaking & Woo-verzoeken
 - Formulieren & aanvragen
 - Inloggen met DigiD / eHerkenning
+- Security (HTTPS, etc.)
 - Toegankelijke websites (WCAG)
-- Meldingen openbare ruimte
 
-<!-- 
+<!--
 Echter! Veel taken die organisaties hebben zijn hetzelfde. Neem bijvoorbeeld de WOO: dat geldt voor ministeries, gemeentes, provincies, waterschappen en ZBO's (UWV, DUO, RDW).
 
-Dus zou het logisch zijn om de software die je bouwt voor deze taken te delen met elkaar, en er samen aan te ontwikkelen. 
+Dus zou het logisch zijn om de software die je bouwt voor deze taken te delen met elkaar, en er samen aan te ontwikkelen.
 
 ZOU JE DENKEN!
 
  -->
 
-
-
-
 <!-- Insert image of overheids-islands? -->
 
-## Ambities, hogere kwaliteit
+## ✅ Pas toe of leg uit
 
-<!-- _class: invert title-left -->
+<!-- _class: list-text-small -->
 
-- Accessibility (WCAG)
-- Security
-- Data delen (API's, Informatiemodellen)
-- AI(-skills)?
+- Lijst met ~40 open standaarden (Forum Standaardisatie)
+- Verplicht bij ICT-inkoop vanaf €50k
+- Niet toepassen? Uitleggen in je jaarverslag
+- HTTPS/HSTS, DNSSEC, WCAG, OpenAPI, REST API Design Rules
 
-<!-- 
+<!--
 
-- Hoe zorgen we er als devs voor dat we op dezelfde manier gaan werken?
-- Hoe convergeren we dus werkwijzen?
-- Onze overheid heeft een enorme ambities als het gaat om de kwaliteit die software zou moeten hebben. Alleen zie je dat die ambities moeten wijken als de deadline in zicht komt. Het vereist best wat specialistische kennis 
+Er ís wel een manier waarop de overheid standaarden een beetje afdwingt: de "pas toe of leg uit"-lijst van het Forum Standaardisatie. Een lijst van zo'n 40 open standaarden. Koop je als overheidsorganisatie ICT in boven de 50.000 euro, dan moet je die standaarden toepassen. Doe je dat niet, dan moet je uitleggen waarom, in je jaarverslag.
 
- -->
+Op de lijst staan dingen die jullie kennen: HTTPS en HSTS, DNSSEC, WCAG voor toegankelijkheid, OpenAPI, en de REST API Design Rules, waar ik het straks uitgebreid over ga hebben.
 
- ## Gedecentraliseerde overheid
+Maar: een lijst maakt nog niet dat het ook gebeurt. Bruggetje naar tooling.
+
+-->
+
+## Gedecentraliseerde overheid
 
 <!-- _class: list-text-small title-small -->
 
@@ -193,17 +273,17 @@ ZOU JE DENKEN!
 - Uitvoering bij kleinste organisatie
 - Techniek niet op te leggen
 
-<!-- 
+<!--
 
 Onze overheid heeft haar macht heel goed verdeeld. De ene uitvoerende organisatie heeft in feite weinig te zeggen over de andere. Dit is heel nuttig want het zorgt voor stabiliteit, alleen kan je dus geen technische werkwijze afdwingen!
 
 -->
 
-## Conclusie; iedereen is eigenwijs
+## Conclusie; iedereen werkt afzonderlijk
 
-Je kan Nederlandse overheidsorganisaties heel moeilijk op leggen hoe te werken
+Moeilijk ook maar iets op leggen hoe te werken
 
-<!-- 
+<!--
 
 
 -->
@@ -216,7 +296,6 @@ Je kan Nederlandse overheidsorganisaties heel moeilijk op leggen hoe te werken
 
 <!-- Dus wat hebben we nodig? -->
 
-
 ## Antwoorden
 
 <!-- _class: invert answers -->
@@ -227,12 +306,10 @@ Je kan Nederlandse overheidsorganisaties heel moeilijk op leggen hoe te werken
 
  <!--  -->
 
-
 ## Mijn doel
 
-Als ik nadacht over mijn werk als developer dan ging het al snel over een grotere
- vraag. Hoe maken we dit beter voor de hele overheid?
-
+Als ik nadacht over mijn werk als developer dan ging het al snel over een grotere vraag. Hoe maken
+we dit beter voor de hele overheid?
 
 ## Iedereen doet wat ie wil!
 
@@ -242,11 +319,10 @@ Als ik nadacht over mijn werk als developer dan ging het al snel over een groter
 
 ## Over developer.overheid.nl
 
-<!-- 
+<!--
 EIndelijk over developer.overheid.nl; wij zijn een bottom up geinspireerd developer platoform, open source. ETc.
 
  -->
-
 
 ### Pas toe leg uit - lijst
 
@@ -254,9 +330,8 @@ Hier ga ik iets vertellen over de PTOLU lijst.
 
 ## Over de API Design Rules
 
-Dit is een open standaard die we samen met de gehele overheid vormgeven. Het
-beschrijft hoe een een HTTP/REST API er uit zou moeten zien, hoe de endpoints
-zouden moeten functioneren.
+Dit is een open standaard die we samen met de gehele overheid vormgeven. Het beschrijft hoe een een
+HTTP/REST API er uit zou moeten zien, hoe de endpoints zouden moeten functioneren.
 
 Iedereen die er iets van vind kan een PR inschieten.
 
@@ -264,18 +339,17 @@ Iedereen die er iets van vind kan een PR inschieten.
 
 Van PROD naar Open API Specification
 
-
 <!--
 
-Ooit onderhielden we een API validator. Een complexe tool die live naar de endpoints van een API ging kijken of deze wel compliant was. 
+Ooit onderhielden we een API validator. Een complexe tool die live naar de endpoints van een API ging kijken of deze wel compliant was.
 
  -->
 
 ## Wat voor problemen het kan oplossen
 
-De Nederlandse overheid is een gedecentraliseerd geheel waarbij elke organisatie
-zelf verantwoordelijk is voor de uitvoering van haar IT. Ik zie dit op korte
-termijn ook niet snel veranderen.
+De Nederlandse overheid is een gedecentraliseerd geheel waarbij elke organisatie zelf
+verantwoordelijk is voor de uitvoering van haar IT. Ik zie dit op korte termijn ook niet snel
+veranderen.
 
 ## Dus hoe krijgen we die standaaarden aan de man?
 
@@ -285,8 +359,7 @@ Goede tooling aanbieden! Dit is ook onze filosofie bij developer.overheid.nl.
 
 Screenshot van de RESPEC van de API Design Rules.
 
-Binnen de overheid hebben we tal van standaarden die verschrikkelijk goed
-gedocumenteerd zijn.
+Binnen de overheid hebben we tal van standaarden die verschrikkelijk goed gedocumenteerd zijn.
 
 ## De rules!
 
@@ -300,9 +373,8 @@ Onze tools kan je uiteraard in je Github/ Gitlab/ Forgejo pipeline hangen.
 
 <img src="./img/harold.png" class="img-centered">
 
-En ik weet wel, als developer ben je vooral dingen aan het oplossen. Developers
-zijn niet van nature mensen die de documentatie erbij pakken en er even goed
-voor gaan zitten.
+En ik weet wel, als developer ben je vooral dingen aan het oplossen. Developers zijn niet van nature
+mensen die de documentatie erbij pakken en er even goed voor gaan zitten.
 
 ## AINT NOBODY GOT TIME FOR THAT
 
