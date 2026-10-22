@@ -1,0 +1,55 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OSS-register API v1",
+    "version": "1.0.0",
+    "contact": {
+      "email": "developer.overheid@geonovum.nl",
+      "name": "Team developer.overheid.nl",
+      "url": "https://github.com/developer-overheid-nl/don-oss-register/issues"
+    },
+    "description": "API to access the OSS register of developer.overheid.nl..."
+  },
+  "servers": [
+    {
+      "description": "Production",
+      "url": "https://api.developer.overheid.nl/oss-register/v1"
+    },
+    ...
+  ],
+  "security": [
+    {
+      "clientCredentials": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Repositories",
+      "description": "Endpoints for listing and managing repositories."
+    },
+    {
+      "name": "Organisations",
+      "description": "Endpoints for listing and managing organisations."
+    },
+    {
+      "name": "Git organisations",
+      "description": "Endpoints for listing and managing git organisations."
+    },
+    {
+      "name": "Public endpoints",
+      "description": "Public endpoints, accessible with an API key or client credentials token."
+    },
+    {
+      "name": "Private endpoints",
+      "description": "Private endpoints of the API register, accessible with a client credentials token."
+    }
+  ],
+  "paths": {
+    "/git-organisations": {...},
+    "/repositories/filters": {...},
+    "/repositories": {...},
+    "/repositories/_search": {...},
+    "/repositories/{id}": {...},
+    "/organisations": {...},
+  }
+}

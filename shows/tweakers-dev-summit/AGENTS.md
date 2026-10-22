@@ -68,6 +68,6 @@ Valkuilen om te vermijden:
 ## Werkafspraken voor slides
 
 - Weinig tekst per slide: maximaal 3 tot 6 korte bullets. Het verhaal zit in de spreker-notes (`<!-- -->`).
-- Gebruik bestaande theme-classes uit `themes/don_main.css`, zoals `invert`, `question`, `answers`, `title-left`, `title-small` en `list-text-small`. Voeg alleen nieuwe classes toe als het nodig is.
+- Gebruik bestaande theme-classes uit `themes/don_main.css`, zoals `invert`, `question`, `answers`, `pillars`, `title-left`, `title-small` en `list-text-small`. Voeg alleen nieuwe classes toe als het nodig is.
 - Afbeeldingen en SVG's gaan in `img/`. Houd de Rijkshuisstijl-kleuren aan met een tech/hackerspace-uitstraling.
 - Controleer visuele wijzigingen door de slide te renderen met marp.
