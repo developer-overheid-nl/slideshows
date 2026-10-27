@@ -1,7 +1,7 @@
 // Maakt public/index.html: een overzichtspagina met links naar alle
 // presentaties die `npm run deck` naar public/shows heeft gebouwd.
 
-import { readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, statSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -26,15 +26,16 @@ function deckTitle(md, fallback) {
 }
 
 function escapeHtml(text) {
-  return text.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  return text.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 }
 
 const decks = findDecks(showsDir)
   .map((file) => {
     const slug = relative(showsDir, dirname(file));
-    return { slug, title: deckTitle(readFileSync(file, "utf8"), slug) };
+    const mtime = statSync(file).mtimeMs;
+    return { slug, title: deckTitle(readFileSync(file, "utf8"), slug), mtime };
   })
-  .sort((a, b) => a.slug.localeCompare(b.slug));
+  .sort((a, b) => b.mtime - a.mtime);
 
 const items = decks
   .map(

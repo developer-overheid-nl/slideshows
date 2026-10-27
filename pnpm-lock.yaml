@@ -17,6 +17,9 @@ importers:
       ncp:
         specifier: ^2.0.0
         version: 2.0.0
+      prettier:
+        specifier: ^3.9.10
+        version: 3.9.10
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -970,6 +973,11 @@ packages:
   preserve@0.2.0:
     resolution: {integrity: sha512-s/46sYeylUfHNjI+sA/78FAHlmIuKqI9wNnzEOGehAlUUYeObv5C2mOinXBjyUyWmJ2SfcS2/ydApH4hTF4WXQ==}
     engines: {node: '>=0.10.0'}
+
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -2317,6 +2325,8 @@ snapshots:
       source-map-js: 1.2.2
 
   preserve@0.2.0: {}
+
+  prettier@3.9.10: {}
 
   process-nextick-args@2.0.1: {}
 
