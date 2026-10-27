@@ -5,6 +5,7 @@
   "license": "WTFPL",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "build": "rimraf public && npm run -s deck && node scripts/index.mjs",
     "deck": "mkdir -p public && ncp ./shows public/shows && cpx \"./themes/**/!(*.keep|*.css)\" public/themes && marp --no-stdin --html -I ./shows -o public/shows && npm run -s deck:own-config",
     "deck:own-config": "find shows -name marp.config.mjs -exec sh -c 'marp --no-stdin --html -c \"$0\" \"${0%/*}/index.md\" -o \"public/${0%/*}/index.html\"' {} \\;",
