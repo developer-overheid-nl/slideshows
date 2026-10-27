@@ -7,13 +7,15 @@ footer: "![width:250px](../../themes/logo.png)"
 lang: nl
 ---
 
+<!-- duration: 45 min -->
+
 ![bg](./img/Presentatiescherm.jpg)
 
 <!-- _header: "" -->
 <!-- _footer: "" -->
 <!-- _paginate: false -->
 
-# <span class="prompt">&gt;</span> standaardiseren <span class="eq">==</span> samenwerken
+# > standaardiseren <span class="eq">==</span> samenwerken
 
 <!-- _class: title invert title-terminal -->
 
@@ -36,8 +38,8 @@ De afgelopen jaren ben ik standaarden gaan zien als een manier van samenwerken,
 van afspraken die je maakt als je bijvoorbeeld een API bouwt of een front-end.
 Ik zie het als een manier voor onze overheid om eindelijk wat meer eenduidig te
 developen, maar ook als een manier om instructies mee te geven aan LLM's zodat
-coding agents niet uit de bocht vliegen. In die zijn worden standaarden steeds
-belangrijk.
+coding agents niet uit de bocht vliegen. In die zin worden standaarden steeds
+belangrijker.
 
 -->
 
@@ -62,9 +64,9 @@ belangrijk.
 Kort eerst iets over mijzelf.
 
 Ik ben Tom, werk al sinds 2023 aan developer.overheid.nl. Als freelancer
-veel verschillende overheidsprojecten gedaan. Vind het mooi om daar aan te
+veel verschillende overheidsprojecten gedaan. Vind het mooi om daaraan te
 werken omdat we met developer.overheid.nl een gemeenschappelijk platform
-hebben om developers op een-duidige manier software te laten bouwen.
+hebben om developers op eenduidige manier software te laten bouwen.
 
 Mijn rol is developer advocate wat betekent dat ik me verdiep in wat developers
 nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
@@ -75,20 +77,20 @@ nodig hebben om bijvoorbeeld compliant te kunnen worden aan een standaard.
 
 <!-- _class: invert -->
 
-1. Over developer.overheid.nl
-1. Mijn verhaal: COVID-19 bij VWS
-1. Het overheidslandschap: eilandjes maar gedeelde taken
-1. Strategie: open source, open standaarden en centrale diensten
-1. Standaarden: API Desing Rules
-1. Open Source: Publiccode.yml
-1. Centrale dienst: Code.overheid.nl
-1. Oproep
+1. developer.overheid.nl & mijn verhaal bij VWS
+2. Het overheidslandschap: eilandjes, maar dezelfde taken
+3. Het antwoord: extreem bruikbare tooling
+4. Pijler 1, open source: publiccode.yml & een skill
+5. Pijler 2, open standaarden: API Design Rules & OAS-Checker
+6. Pijler 3, Overheidsbrede services: code.overheid.nl
+7. Oproep
 
 <!--
-Even wat we gaan doen: eerst kort wat developer.overheid.nl is. Dan hoe ik er
-terechtkwam, via mijn werk bij VWS tijdens corona. Daarna het overheidslandschap
-en waarom standaardiseren zo lastig is. En tot slot onze strategie: tooling die
-zo goed is dat je vanzelf compliant wordt.
+Even wat we gaan doen: eerst kort wat developer.overheid.nl is, en hoe ik er
+terechtkwam via mijn werk bij VWS tijdens corona. Daarna het overheidslandschap
+en waarom standaardiseren daar zo lastig is. Dan ons antwoord: tooling die zo
+goed is dat je vanzelf compliant wordt, langs drie pijlers. En je ziet straks
+ook hoe standaarden instructies worden voor je coding agent.
 -->
 
 ##
@@ -114,58 +116,6 @@ En we zijn zelf ook open source: alles staat op GitHub, en iedereen mag meedoen.
 We leggen niets op. We proberen het makkelijk te maken. Daar gaat deze talk over.
 -->
 
-## Kennisbank
-
-<!-- _class: page-image-only -->
-<!-- _header: "" -->
-<!-- _footer: "" -->
-<!-- _paginate: false -->
-
-![bg](./img/kennisbank.png)
-
-<!--
-De kennisbank: artikelen over API-ontwikkeling, front-end, data, open source, DevOps en security. Op dit moment 169 artikelen.
--->
-
-## API-register
-
-<!-- _class: page-image-only -->
-<!-- _header: "" -->
-<!-- _footer: "" -->
-<!-- _paginate: false -->
-
-![bg](./img/api-catalogus.png)
-
-<!--
-Het API-register: alle API's van de overheid op één plek, 322 op dit moment. Elke API krijgt een ADR-score: hoe goed volgt hij de API Design Rules. Daar kom ik straks op terug.
--->
-
-## Open Source Register
-
-<!-- _class: page-image-only -->
-<!-- _header: "" -->
-<!-- _footer: "" -->
-<!-- _paginate: false -->
-
-![bg](./img/oss-catalogus.png)
-
-<!--
-Het Open Source Register: open source repositories van de overheid, op basis van publiccode.yml. Zo zie je welke software er al is en wie er nog meer aan werkt.
--->
-
-## Blog
-
-<!-- _class: page-image-only -->
-<!-- _header: "" -->
-<!-- _footer: "" -->
-<!-- _paginate: false -->
-
-![bg](./img/blog.png)
-
-<!--
-En een blog, met technische posts van ons en van andere overheidsteams.
--->
-
 ## COVID-19: front-end dev VWS
 
 <!-- _class: invert title-left -->
@@ -183,7 +133,7 @@ Midden in de coronacrisis: software voor het bron- en contactonderzoek,
 vragenlijsten en formulieren, en het informeren van burgers met statistieken.
 -->
 
-## Hoe het er aan toe ging
+## Hoe het eraan toe ging
 
 <!-- _class: title-left invert -->
 
@@ -196,9 +146,9 @@ vragenlijsten en formulieren, en het informeren van burgers met statistieken.
 
 <!--
 
-Nou waar we toen mee te maken hadden waren veel beleidswijzingen. Het kon zijn dat als we maandagochtend onze werkdag begonnenn dat er dan allerlei paramaters zoals bijvoorbeeld de quarantaineperiode gewijzigd moesten worden. Wij moesten dat dan zo snel mogelijk doorvoeren, dit had trouwens allerlei effecten op hoe de front-end werkte, dus dat moest getest worden, en dan moest het naar productie.
+Nou waar we toen mee te maken hadden waren veel beleidswijzigingen. Het kon zijn dat als we maandagochtend onze werkdag begonnen dat er dan allerlei parameters zoals bijvoorbeeld de quarantaineperiode gewijzigd moesten worden. Wij moesten dat dan zo snel mogelijk doorvoeren, dit had trouwens allerlei effecten op hoe de front-end werkte, dus dat moest getest worden, en dan moest het naar productie.
 
-Nog een ding, voor het VWS was het Nog een ding, voor het VWS was het dus iets nieuws om zelf software te bouwen. Dus de organisatie moest er heel erg aan wennen.
+Nog een ding, voor het VWS was het dus iets nieuws om zelf software te bouwen. Dus de organisatie moest er heel erg aan wennen.
 
 Ja, het voelde als developer dus gek om in die context ook te bouwen, omdat er niks vastgelegd was.
 
@@ -236,7 +186,7 @@ Eilandjes > 1 ecosysteem
 
 Tijdens mijn werk kwam ik erachter dat overheidsorganisaties eerder functioneren
  als aparte eilandjes dan als een ecosysteem. Elke organisatie waarmee ik praatte
- hadden en andere tech-stack.
+ had een andere tech-stack.
 
  -->
 
@@ -251,7 +201,7 @@ Tijdens mijn werk kwam ik erachter dat overheidsorganisaties eerder functioneren
 - Toegankelijke websites (WCAG)
 
 <!--
-Echter! Veel taken die organisaties hebben zijn hetzelfde. Neem bijvoorbeeld de WOO: dat geldt voor ministeries, gemeentes, provincies, waterschappen en ZBO's (UWV, DUO, RDW).
+Echter! Veel taken die organisaties hebben zijn hetzelfde. Neem bijvoorbeeld de Woo: dat geldt voor ministeries, gemeentes, provincies, waterschappen en ZBO's (UWV, DUO, RDW).
 
 Dus zou het logisch zijn om de software die je bouwt voor deze taken te delen met elkaar, en er samen aan te ontwikkelen.
 
@@ -270,23 +220,23 @@ ZOU JE DENKEN!
 - Lijst met ~40 open standaarden (Forum Standaardisatie)
 - Verplicht bij ICT-inkoop vanaf €50k
 - Niet toepassen? Uitleggen in je jaarverslag
-- HTTPS/HSTS, DNSSEC, WCAG, OpenAPI, REST API Design Rules
+- HTTPS/HSTS, DNSSEC, WCAG
 
 <!--
 
-Er ís wel een manier waarop de overheid standaarden een beetje afdwingt: de "pas toe of leg uit"-lijst van het Forum Standaardisatie. Een lijst van zo'n 40 open standaarden. Koop je als overheidsorganisatie ICT in boven de 50.000 euro, dan moet je die standaarden toepassen. Doe je dat niet, dan moet je uitleggen waarom, in je jaarverslag.
+Er ís wel een manier waarop de overheid standaarden afdwingt: de "pas toe of leg uit"-lijst van het Forum Standaardisatie. Een lijst van zo'n 40 open standaarden. Koop je als overheidsorganisatie ICT in boven de 50.000 euro, dan moet je die standaarden toepassen. Doe je dat niet, dan moet je uitleggen waarom, in je jaarverslag.
 
 Op de lijst staan dingen die jullie kennen: HTTPS en HSTS, DNSSEC, WCAG voor toegankelijkheid, OpenAPI, en de REST API Design Rules, waar ik het straks uitgebreid over ga hebben.
 
-Maar: een lijst maakt nog niet dat het ook gebeurt. Bruggetje naar tooling.
+Maar: een lijst maakt nog niet dat het ook gebeurt.
 
 -->
 
 ## Gedecentraliseerde overheid
 
-<!-- _class: list-text-small title-small invert title-left -->
+<!-- _class: list-text-small title-small invert title-left no-logo -->
 
-![bg right:55% contain](./img/subsidiariteit.svg)
+![bg right:65% contain](./img/subsidiariteit.svg)
 
 - Macht is verdeeld
 - Uitvoering bij kleinste organisatie
@@ -304,13 +254,23 @@ Onze overheid heeft haar macht heel goed verdeeld. De ene uitvoerende organisati
 
 ![bg brightness:0.5](./img/asterix.jpg)
 
-<!--
-
--->
-
 ## Het antwoord: **extreem bruikbare** tooling bouwen!
 
-Met echt nuttig is in de praktijk
+<!-- _class: invert title-left title-top -->
+
+![bg brightness:0.6](./img/finn-sword.jpg)
+
+Die echt nuttig is in de praktijk
+
+<div class="credit">
+
+[Finn Sword][finn-sword] door normal|studio · [CC BY 4.0][cc-by]
+
+</div>
+
+[finn-sword]:
+  https://sketchfab.com/3d-models/adventure-time-finns-finn-sword-05c32304f93b4287a94d0e4983dc8ddd
+[cc-by]: https://creativecommons.org/licenses/by/4.0/
 
 <!--
 
@@ -326,26 +286,102 @@ Met echt nuttig is in de praktijk
 
 <!-- _class: invert pillars -->
 
-- 1:Open source samenwerken `NL-Design-System` `Haven (k8s)`
-- 2:Open standaarden `API Design Rules` `HTTPS` `Digitoegankelijk`
-- 3:Gedeelde services `code.overheid.nl` `developer.overheid.nl`
+- 1: Open source samenwerken `NL Design System` `Haven (k8s)`
+- 2: Open standaarden `API Design Rules` `HTTPS` `Digitoegankelijk`
+- 3: Gedeelde services `code.overheid.nl` `developer.overheid.nl`
 
  <!--  -->
 
 ## Pijler 1: Open Source samenwerken
 
 - Cultuurverandering
-- Vanzelfspreken voor developers
-
+- Vanzelfsprekend voor developers
 - Vaak geen ruimte
 
 ## Vind het wiel niet opnieuw uit
 
-<!-- _class: invert -->
+<!-- _class: invert grid-paper -->
 
 <img src="./img/oss-catalogus.png" class="img-centered" />
 
-## Repo open source klaarmaken, met een skill
+## 🪄 publiccode.yml
+
+<div class="two-columns">
+  <ul>
+    <li>Metadata-standaard voor open source van de overheid</li>
+    <li>In 2018 ontstaan in Italië</li>
+    <li>Eén YAML-bestand in de root van je repo</li>
+    <li>Makkelijk migreren van git-platform</li>
+    <li>Gebruikt door catalogi in 🇮🇹 🇫🇷 🇩🇪 🇳🇱</li>
+  </ul>
+  <div>
+    <img src="./img/boeken.png" alt="Voorbeeld van een publiccode.yml" style="max-height: 480px; display: block; margin: 0 auto;">
+  </div>
+</div>
+
+<!--
+
+Dit is de bron van de Open Source Catalogus die je net zag.
+Het bestand werkt als een vlag: "dit is overheidssoftware, en je mag het hergebruiken".
+Het is machineleesbaar, dus catalogi kunnen het automatisch oppikken.
+
+-->
+
+## Voorbeeld publiccode.yml
+
+<!-- _class: invert code-editor -->
+
+<style scoped>section { --code-editor-file: "publiccode.yml"; --code-editor-status: "YAML · publiccode.yml 0.7"; }</style>
+
+```yml
+publiccodeYmlVersion: "0.7"
+name: don-checker
+url: "https://github.com/developer-overheid-nl/don-checker"
+softwareType: standalone/other
+developmentStatus: stable
+platforms: [web, linux]
+
+organisation:
+  uri: "https://developer.overheid.nl"
+  name: developer.overheid.nl
+
+supports:
+  - id: https://gitdocumentatie.logius.nl/publicatie/api/adr/
+
+description:
+  nl:
+    shortDescription: Controleer je API tegen de API Design Rules
+    longDescription: >
+      ...
+    features:
+      - Linter voor OpenAPI-specificaties
+      - Te draaien in CI
+
+legal:
+  license: EUPL-1.2
+
+maintenance:
+  type: internal
+  contacts:
+    - name: Team developer.overheid.nl
+
+localisation:
+  localisationReady: false
+  availableLanguages: [nl]
+```
+
+<!--
+
+Naam, URL, status, licentie, onderhoud: dat is eigenlijk alles.
+De longDescription is ingekort voor de slide.
+
+Nieuw sinds 0.5: `organisation` (wie publiceert de software, met een URI).
+Nieuw in 0.7: `supports`, welke standaarden/regelgeving de software ondersteunt
+(hier de API Design Rules). Vervangt de landspecifieke secties.
+
+-->
+
+## Repo open source klaarmaken, met een _agent skill_
 
 <!-- _class: invert code-terminal title-top -->
 
@@ -373,14 +409,6 @@ Met echt nuttig is in de praktijk
 
 <!--
 
-Mooi, zo'n catalogus. Maar dan moet je repo er wel in passen: een README, een licentie, een SECURITY.md, en een publiccode.yml zodat de catalogus weet wat je project is.
-
-Daarvoor hebben we de repo-docs-generator: een webtool én CLI die al die bestanden genereert uit één input.json, op basis van gedeelde templates.
-
-En omdat niemand graag een input.json invult, zit er een Agent Skill bij. Je vraagt je AI-assistent gewoon "voeg een correcte licentie toe", en de skill laadt vanzelf. Die leest je repo uit, vult de input in en draait de generator. Belangrijk: de agent schrijft de bestanden níet zelf, de templates blijven de bron van waarheid. Zo krijg je geen gehallucineerde publiccode.yml.
-
-Paved road: de makkelijkste weg is meteen de goede.
-
 -->
 
 ## Pijler 2: Open Standaarden & tooling
@@ -393,12 +421,13 @@ Paved road: de makkelijkste weg is meteen de goede.
 
 - Open Source, iedereen kan meedoen
 - HTTP/REST
-- Open API Spec
+- OpenAPI Spec
+- **Duidelijke instructies** voor LLM's
 - Architectuur-standaard
 - Voorkomt discussies
 - Ook nuttig voor bedrijven!
 
-## Voorbeeld Open API Spec (Swagger)
+## Voorbeeld OpenAPI Spec (Swagger)
 
 <!-- _class: invert code-editor -->
 
@@ -480,9 +509,44 @@ En belangrijk: bij errors is de exit code 1. Dus je hangt hem zo in je pipeline 
 
 -->
 
+## API Design Rules als skill voor je coding agent
+
+<!-- _class: invert code-terminal title-top -->
+
+<style scoped>section { --code-terminal-title: "tom@developer.overheid.nl: ~/waterkeringen-api"; }</style>
+
+<pre class="terminal"><span class="user">tom@developer.overheid.nl</span>:<span class="path">~/waterkeringen-api</span>$ claude plugin install standaarden@overheid-plugins
+<span class="ok">✔</span> Installed standaarden
+
+<span class="user">tom@developer.overheid.nl</span>:<span class="path">~/waterkeringen-api</span>$ claude
+<span class="rule">❯ ontwerp een API voor waterkeringen, volgens de API Design Rules</span>
+
+<span class="ok">●</span> <span class="rule">Skill</span>(standaarden:<span class="ok">ls-api</span>)
+  <span class="dim">⎿ Successfully loaded skill</span>
+
+<span class="ok">●</span> <span class="rule">Created</span> openapi.yaml <span class="ok">(+142</span> <span class="err">-0)</span>
+  <span class="dim">⎿</span> servers: [{ url: https://api.example.nl/waterkeringen/<span class="ok">v1</span> }]
+     paths: /<span class="ok">water-keringen</span>/{id}
+     headers: API-Version: <span class="link">$ref: static.developer.overheid.nl/adr/components.yaml</span>
+
+<span class="ok">●</span> <span class="rule">Bash</span>(npx @developer-overheid-nl/don-checker validate --standard adr)
+  <span class="dim">⎿</span> Diagnostics: 0 (<span class="ok">errors 0</span>, warnings 0, info 0, hints 0)</pre>
+
+<!--
+
+En dan de volgende stap: dezelfde regels, maar dan vóórdat je code schrijft. In onze skills-marketplace zit een plugin met skills voor de Logius-standaarden, waaronder de API Design Rules.
+
+Vraag je coding agent om een API te ontwerpen, en de skill laadt vanzelf. De agent kent dan de regels: major versie in de URI, kebab-case paden, de API-Version header. En hij hergebruikt de standaardcomponenten via een $ref, in plaats van ze zelf te verzinnen.
+
+Daarna draait hij de don-checker zelf, dus hij controleert zijn eigen werk. Precies de drie fouten van de vorige slide, maar nu voorkomen in plaats van gevonden.
+
+Standaarden als instructies voor je LLM: zo vliegt je agent niet uit de bocht.
+
+-->
+
 <!-- ## Een les die we leerden
 
-Van PROD naar Open API Specification
+Van PROD naar OpenAPI Specification
 
 <!--
 
@@ -490,21 +554,11 @@ Ooit onderhielden we een API validator. Een complexe tool die live naar de endpo
 
 -->
 
-## 3: Overheidsbrede services
+## Pijler 3: Overheidsbrede services
 
 - Code.overheid.nl
 - Gestandaardiseerde K8s clusters
 - Templates/ Golden paths per programmeertaal
-
-## code.overheid.nl
-
-<!-- _class:  -->
-
-- Soevereiniteit
-- 1 plek voor development
-- Netwerkeffect!
-
-<img src="./img/forgejo.svg" alt="Forgejo-logo" class="centered-image"/>
 
 <!--
 
@@ -520,9 +574,39 @@ Toegang is nog beperkt: aanmelden via codeplatform@rijksoverheid.nl.
 
 -->
 
+## code<span>.overheid</span>.nl
+
+<!-- _class: codeoverheid -->
+
+Eén git forge voor de hele overheid
+
+<code class="push"><span class="p">$</span> git push code.overheid.nl:kiesraad/abacus main
+<span class="ok">✓</span></code>
+
+- **Forgejo** Open source (GPLv3+), geen vendor lock-in
+- **Soeverein** Draait op eigen overheidsinfra
+- **Eén plek** Issues, PR's en reviews, voor iedereen
+- **Netwerkeffect!** Vind, fork en hergebruik elkaars code
+
+## Would you kindly?
+
+<!-- _class: bioshock -->
+
+- Hang onze tools in je CI (of in je terminal)
+- Installeer onze skills in je coding agent
+- Draag bij: issues & PR's op GitHub
+- Schrijf een gastblog, gebruik de kennisbank
+- Kom naar onze meetup op 12 december
+
+<!--
+
+Voor de BioShock-fans onder ons: dit is geen verzoek. … Nee hoor, grapje. Wij kunnen niks afdwingen, en daarom bouwen we tooling die je wílt gebruiken.
+
+-->
+
 ## Bedankt!
 
-<!-- _class: invert -->
+<!-- _class: invert grid-paper -->
 
 <style scoped>
 .meetup { position: absolute; right: 80px; top: 50%; transform: translateY(-50%); width: 340px; text-align: center; }

@@ -69,6 +69,14 @@ section[data-marpit-advanced-background="pseudo"][data-marpit-advanced-backgroun
   background: var(--rijkslogo) no-repeat top center / 40px auto;
 }
 
+/* Slide zonder Rijkslogo bovenaan. */
+section.no-logo header {
+  background-image: none;
+}
+section.no-logo[data-marpit-advanced-background="pseudo"][data-marpit-advanced-background-split]::before {
+  content: none;
+}
+
 section h1,
 section h2,
 section h3,
@@ -226,21 +234,6 @@ section.page-image-only h2 {
   content: "";
 }
 
-.horizontal-list li::after&last-child {
-  /* content: ""; */
-}
-
-.grid-four-columns {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* background-color: red; */
-  grid-gap: 1rem;
-}
-
-#how-did-i-get-here {
-  margin-top: 1rem;
-}
-
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -284,48 +277,6 @@ section.page-image-only h2 {
 
 .card-border {
   border: solid #cbd5e1 2px;
-}
-
-quote {
-  display: block;
-  margin: 1.5rem auto;
-  max-width: 85%;
-  padding: 1.25rem 1.75rem;
-  border-left: 4px solid #017bc6;
-  background-color: var(--don-lichtblauw-200);
-  text-align: left;
-}
-
-quote .quote-term {
-  display: block;
-  font-family: "Liberation Mono", monospace;
-  font-weight: bold;
-  font-size: 1.3em;
-  color: #017bc6;
-}
-
-quote .quote-pos {
-  display: block;
-  font-style: italic;
-  font-size: 0.7em;
-  color: #475569;
-  margin-bottom: 0.6rem;
-}
-
-quote p {
-  margin: 0;
-  font-size: 0.85em;
-  line-height: 1.5;
-  color: #1e293b;
-}
-
-quote cite {
-  display: block;
-  margin-top: 0.6rem;
-  font-size: 0.7em;
-  font-style: normal;
-  text-align: right;
-  color: #475569;
 }
 
 figure {
@@ -529,20 +480,43 @@ section.rainbow footer img {
   }
 }
 
-/* Gecentreerde slidetitel. Gebruik: <!-- _class: title-center --> */
-section.title-center h2 {
-  text-align: center;
-}
-
 /* Links uitgelijnde slidetitel, ook op invert-slides. Gebruik: <!-- _class: title-left --> */
 section.title-left h2 {
   text-align: left;
 }
 
+/* Titel en inhoud bovenaan de slide in plaats van verticaal gecentreerd, bv. om een achtergrondfoto vrij te laten.
+   Gebruik: <!-- _class: title-top --> */
+section.title-top {
+  align-content: start;
+  padding-top: 110px;
+}
+
+/* Kleine bronvermelding rechtsonder, op de hoogte van het footerlogo.
+   Gebruik: <div class="credit"> met daarin (met lege regels eromheen) een Markdown-regel, bv.
+   [Foto][foto] door … · [CC BY 4.0][cc-by]. Houd de regel kort, anders breekt Prettier hem af. */
+section .credit {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  font-size: 0.4em;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-align: right;
+  opacity: 0.6;
+  width: 340px;
+}
+section .credit p {
+  margin: 0;
+}
+section .credit a {
+  color: inherit !important;
+}
+
 /* Kleinere lijsttekst, bv. naast een grote afbeelding. Gebruik: <!-- _class: list-text-small --> */
 section.list-text-small ul,
 section.list-text-small ol {
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 section.list-text-small li {
   margin-bottom: 0.4em;
@@ -565,59 +539,6 @@ section.grid-paper.invert {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-}
-
-/* Antwoorden als genummerde kaarten naast elkaar; past bij de question-slide.
-   Gebruik: <!-- _class: invert answers --> met een lijst van (twee of drie) antwoorden. */
-section.answers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-section.answers h2 {
-  padding: 0;
-  margin: 0 0 2.5rem;
-  font-size: 0.8em;
-  font-weight: normal;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--don-lichtblauw-200) !important;
-}
-section.answers h2::before {
-  content: "// ";
-  opacity: 0.6;
-}
-section.answers ul {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0 !important;
-  list-style: none;
-  counter-reset: answer;
-}
-section.answers li {
-  counter-increment: answer;
-  margin: 0;
-  padding: 1.6rem 1.6rem 1.8rem;
-  border-radius: 8px;
-  border-top: 8px solid #154273;
-  background-color: #ffffff;
-  color: #154273;
-  font-family: "Liberation Mono", monospace;
-  font-weight: bold;
-  font-size: 0.75em;
-  line-height: 1.3;
-  overflow-wrap: anywhere;
-  box-shadow: 0 12px 30px rgba(21, 66, 115, 0.35);
-}
-section.answers li::before {
-  content: counter(answer, decimal-leading-zero);
-  display: block;
-  margin-bottom: 0.8rem;
-  font-size: 2.2em;
-  color: #017bc6;
 }
 
 /* Antwoorden als drie pijlers onder een timpaan: de h2 is het dak, de lijst de zuilen.
@@ -715,75 +636,6 @@ section.pillars li code:first-of-type {
   margin-top: 0.5rem;
 }
 
-/* Ambities van de overheid als raster van genummerde doel-kaarten.
-   Gebruik: <!-- _class: ambitions --> met een lijst van ambities. */
-section.ambitions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-section.ambitions h2 {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0 0 2rem;
-  color: #154273;
-}
-section.ambitions h2::after {
-  content: "🏛️ van de overheid";
-  padding: 0.35em 0.9em;
-  border-radius: 999px;
-  background-color: #154273;
-  color: #ffffff;
-  font-size: 0.45em;
-  font-weight: normal;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-section.ambitions ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  margin: 0;
-  padding: 0 !important;
-  list-style: none;
-  counter-reset: ambition;
-}
-section.ambitions li {
-  counter-increment: ambition;
-  position: relative;
-  margin: 0;
-  padding: 1.1rem 1.5rem 1.2rem 4.2rem;
-  border-left: 6px solid #154273;
-  border-radius: 6px;
-  background-color: var(--don-lichtblauw-200);
-  color: #154273;
-  font-weight: bold;
-  line-height: 1.3;
-}
-section.ambitions li::before {
-  content: "◎";
-  position: absolute;
-  left: 1.3rem;
-  top: 50%;
-  translate: 0 -50%;
-  font-size: 1.6em;
-  color: #017bc6;
-}
-section.ambitions li::after {
-  content: "ambitie " counter(ambition, decimal-leading-zero);
-  display: block;
-  order: -1;
-  margin-top: 0.2rem;
-  font-family: "Liberation Mono", monospace;
-  font-size: 0.55em;
-  font-weight: normal;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #017bc6;
-}
-
 /* Titelslide als node-REPL in een terminalvenster op een Rijksblauw raster.
    Gebruik: <!-- _class: title invert title-terminal --> met een h1 (evt. met <span class="eq">)
    en daaronder de horizontal-list met spreker/datum. */
@@ -874,25 +726,6 @@ section.title-terminal .horizontal-list li {
   font-size: 0.6rem !important;
 }
 
-/* Heel kleine code, bijv. voor een lange OAS als "muur van tekst".
-   Marp's auto-scaling staat uit; wat niet past wordt afgekapt.
-   Gebruik: <!-- _class: code-tiny --> */
-section.code-tiny :is(pre, marp-pre) {
-  font-size: 7px;
-  line-height: 1.2;
-  max-height: 540px;
-  overflow: hidden;
-}
-
-section.code-tiny :is(pre, marp-pre)::part(auto-scaling) {
-  max-height: none;
-}
-
-section.code-tiny :is(pre, marp-pre) > code {
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
 /* Codeblok als editorvenster (zelfde Ptyxis/Yaru-look als title-terminal) op een Rijksblauw raster:
    titel links, editor rechts, met regelnummers, Rijkshuisstijl-syntaxkleuren en een statusbalk.
    Bestandsnaam en statusregel zijn per slide aan te passen met een <style scoped>, bv.
@@ -911,6 +744,9 @@ section.code-terminal {
   align-items: center;
   padding: 100px 48px 40px 80px;
   overflow: hidden;
+}
+section.code-editor,
+section.code-terminal {
   background-color: #154273 !important;
   background-image:
     radial-gradient(circle at 12% 30%, rgba(0, 123, 199, 0.55), transparent 45%),
@@ -1007,7 +843,12 @@ section.code-editor :is(pre, marp-pre) > code {
   display: block;
   padding: 0 0 0 4.2em;
   overflow: hidden;
-  background: linear-gradient(90deg, transparent 3.2em, rgba(255, 255, 255, 0.08) 3.2em calc(3.2em + 1px), transparent calc(3.2em + 1px));
+  background: linear-gradient(
+    90deg,
+    transparent 3.2em,
+    rgba(255, 255, 255, 0.08) 3.2em calc(3.2em + 1px),
+    transparent calc(3.2em + 1px)
+  );
   color: inherit;
   font-family: inherit;
 }
@@ -1038,7 +879,7 @@ section.code-editor .hljs-punctuation {
 
 /* Terminalvenster met CLI-output, naast de titel (layout zoals code-editor).
    Schrijf de output als HTML in <pre class="terminal"> met de spans hieronder voor kleur:
-   .user/.path (bash-prompt), .err, .warn, .ok, .dim, .rule, .link.
+   .user/.path (bash-prompt), .err, .ok, .dim, .rule, .link.
    Venstertitel aanpasbaar met <style scoped>section { --code-terminal-title: "..."; }</style>
    Gebruik: <!-- _class: invert code-terminal --> */
 section.code-terminal {
@@ -1111,10 +952,6 @@ section.code-terminal pre.terminal .err {
   color: #f66151;
   font-weight: bold;
 }
-section.code-terminal pre.terminal .warn {
-  color: #f9e11e;
-  font-weight: bold;
-}
 section.code-terminal pre.terminal .ok {
   color: #76d2b6;
 }
@@ -1130,11 +967,222 @@ section.code-terminal pre.terminal .link {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-/* Knipperende cursor achter de laatste prompt. */
-section.code-terminal pre.terminal .cursor {
+/* BioShock / Rapture: Art Deco onder water. Diepzee-achtergrond met lichtbundels en bubbels,
+   een gouden Art Deco-lijst met zonnewaaier en een serif-titel in goud.
+   Gebruik: <!-- _class: bioshock --> met een h2 en een korte lijst. */
+section.bioshock {
+  --rapture-gold: #e3bd62;
+  --rapture-gold-dark: #9c7428;
+  --rapture-cream: #f1e6c8;
+  padding: 100px 140px 150px;
+  color: var(--rapture-cream);
+  background-color: #04161a !important;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='720' viewBox='0 0 1280 720'%3E%3Cg fill='none' stroke='%23c9a24a'%3E%3Cpath stroke-width='2.5' d='M64 22 H1216 L1258 64 V656 L1216 698 H64 L22 656 V64 Z'/%3E%3Cpath stroke-width='1' opacity='.7' d='M74 32 H1206 L1248 74 V646 L1206 688 H74 L32 646 V74 Z'/%3E%3Cpath stroke-width='1.5' d='M80 34 h40 M34 80 v40 M90 44 h32 M44 90 v32 M100 54 h24 M54 100 v24'/%3E%3Cpath stroke-width='1.5' d='M1200 34 h-40 M1246 80 v40 M1190 44 h-32 M1236 90 v32 M1180 54 h-24 M1226 100 v24'/%3E%3Cpath stroke-width='1.5' d='M80 686 h40 M34 640 v-40 M90 676 h32 M44 630 v-32 M100 666 h24 M54 620 v-24'/%3E%3Cpath stroke-width='1.5' d='M1200 686 h-40 M1246 640 v-40 M1190 676 h-32 M1236 630 v-32 M1180 666 h-24 M1226 620 v-24'/%3E%3Cpath stroke-width='1.5' fill='%23c9a24a' fill-opacity='.25' d='M22 342.0 L32 360.0 L22 378.0 L12 360.0 Z'/%3E%3Cpath stroke-width='1.5' fill='%23c9a24a' fill-opacity='.25' d='M1258 342.0 L1268 360.0 L1258 378.0 L1248 360.0 Z'/%3E%3Cpath stroke-width='1' opacity='.35' d='M594.0 698.0 L450.0 698.0 M594.4 692.0 L491.3 678.4 M595.6 686.1 L456.5 648.8 M597.5 680.4 L501.4 640.6 M600.2 675.0 L475.5 603.0 M603.5 670.0 L521.0 606.7 M607.5 665.5 L505.6 563.6 M612.0 661.5 L548.7 579.0 M617.0 658.2 L545.0 533.5 M622.4 655.5 L582.6 559.4 M628.1 653.6 L590.8 514.5 M634.0 652.4 L620.4 549.3 M640.0 652.0 L640.0 508.0 M646.0 652.4 L659.6 549.3 M651.9 653.6 L689.2 514.5 M657.6 655.5 L697.4 559.4 M663.0 658.2 L735.0 533.5 M668.0 661.5 L731.3 579.0 M672.5 665.5 L774.4 563.6 M676.5 670.0 L759.0 606.7 M679.8 675.0 L804.5 603.0 M682.5 680.4 L778.6 640.6 M684.4 686.1 L823.5 648.8 M685.6 692.0 L788.7 678.4 M686.0 698.0 L830.0 698.0'/%3E%3Cpath stroke-width='1.2' opacity='0.6' d='M594.0 698 A46 46 0 0 1 686.0 698'/%3E%3Cpath stroke-width='1.2' opacity='0.4' d='M586.0 698 A54 54 0 0 1 694.0 698'/%3E%3Cpath stroke-width='1.2' opacity='0.25' d='M440.0 698 A200 200 0 0 1 840.0 698'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at 82% 28%,
+      transparent 9px,
+      rgba(190, 240, 235, 0.35) 10px,
+      transparent 12px
+    ),
+    radial-gradient(
+      circle at 86% 40%,
+      transparent 5px,
+      rgba(190, 240, 235, 0.3) 6px,
+      transparent 8px
+    ),
+    radial-gradient(
+      circle at 79% 52%,
+      transparent 3px,
+      rgba(190, 240, 235, 0.3) 4px,
+      transparent 6px
+    ),
+    radial-gradient(
+      circle at 90% 60%,
+      transparent 7px,
+      rgba(190, 240, 235, 0.25) 8px,
+      transparent 10px
+    ),
+    radial-gradient(
+      circle at 14% 70%,
+      transparent 4px,
+      rgba(190, 240, 235, 0.25) 5px,
+      transparent 7px
+    ),
+    radial-gradient(
+      circle at 10% 58%,
+      transparent 2px,
+      rgba(190, 240, 235, 0.3) 3px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(105deg, rgba(150, 225, 215, 0.05) 0 30px, transparent 30px 120px),
+    radial-gradient(ellipse 70% 55% at 50% -10%, rgba(64, 170, 160, 0.55), transparent 70%),
+    linear-gradient(180deg, #0b3a3d 0%, #062327 45%, #020b0d 100%);
+}
+/* Geen footerlogo: dat breekt de Rapture-sfeer. Het Rijkslogo bovenaan blijft staan. */
+section.bioshock footer {
+  display: none;
+}
+section.bioshock h2 {
+  margin: 0 0 0.5em;
+  font-family: "Liberation Serif", serif;
+  font-size: 2.1em;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center !important;
+  color: var(--rapture-gold) !important;
+  background: linear-gradient(
+    180deg,
+    #fff0bf 0%,
+    var(--rapture-gold) 45%,
+    var(--rapture-gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(227, 189, 98, 0.35));
+}
+/* Art Deco-ornament onder de titel: ◆ ━━━ ◆ ━━━ ◆ */
+section.bioshock h2::after {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 14px;
+  margin: 0.35em auto 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='14'%3E%3Cg fill='%23e3bd62'%3E%3Cpath d='M210 0l7 7-7 7-7-7z'/%3E%3Cpath d='M20 3l4 4-4 4-4-4zM400 3l4 4-4 4-4-4z'/%3E%3Crect x='30' y='6' width='168' height='2'/%3E%3Crect x='222' y='6' width='168' height='2'/%3E%3Crect x='60' y='10' width='138' height='1' opacity='.6'/%3E%3Crect x='222' y='10' width='138' height='1' opacity='.6'/%3E%3C/g%3E%3C/svg%3E")
+    no-repeat center;
+}
+section.bioshock ul {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.6em 1.6em 0.6em 1.2em;
+  list-style: none;
+  font-family: "Liberation Serif", serif;
+  font-size: 0.95em;
+  letter-spacing: 0.03em;
+  border-top: 1px solid rgba(227, 189, 98, 0.5);
+  border-bottom: 1px solid rgba(227, 189, 98, 0.5);
+}
+section.bioshock li {
+  margin: 0.25em 0;
+}
+section.bioshock li::before {
+  content: "◆";
+  margin-right: 0.7em;
+  color: var(--rapture-gold);
+  font-size: 0.7em;
+  vertical-align: 0.15em;
+}
+/* code.overheid.nl: nagebouwd op de homepage van het codeplatform. Roze hero met paarse
+   woordmerk-titel, een git-commando als "terminalpil" en daaronder een witte strook met
+   vier kaarten met lijnicoontjes (1e kaart krijgt het Forgejo-logo).
+   Gebruik: <!-- _class: codeoverheid --> met een h2 als `code<span>.overheid</span>.nl`,
+   een tagline-paragraaf, een <code class="push"> en een lijst van 4 items (**titel** tekst). */
+section.codeoverheid {
+  --co-pink: #f092cd;
+  --co-pink-dark: #e060a0;
+  --co-purple: #42145f;
+  --co-purple-btn: #3d1a6e;
+  padding: 110px 80px 290px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--co-purple);
+  text-align: center;
+  justify-content: flex-start;
+  background-color: var(--co-pink) !important;
+  /* Bovenste laag: witte kaartenstrook die het puntjesraster van de hero afdekt. */
+  background-image:
+    linear-gradient(180deg, transparent 0 63%, #fff 63% 100%),
+    radial-gradient(rgba(66, 20, 95, 0.18) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 24px 24px;
+}
+section.codeoverheid h2 {
   display: inline-block;
-  width: 0.6em;
-  height: 1.1em;
-  vertical-align: text-bottom;
-  background: #ffffff;
+  align-self: center;
+  margin: 0.1em auto 0.35em;
+  padding: 0.12em 0.4em 0.16em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.9em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff !important;
+  background: var(--co-purple-btn);
+  box-shadow: 10px 10px 0 rgba(66, 20, 95, 0.25);
+}
+section.codeoverheid h2 span {
+  color: #f5a8cc;
+}
+section.codeoverheid h2 + p {
+  margin: 0.3em 0 0.6em;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+section.codeoverheid code.push {
+  display: inline-block;
+  padding: 0.45em 1em;
+  font-family: "Liberation Mono", monospace;
+  font-size: 0.62em;
+  color: #fff;
+  background: #1e1e1e;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(66, 20, 95, 0.35);
+}
+section.codeoverheid code.push a {
+  color: #fff;
+  text-decoration: none;
+}
+section.codeoverheid code.push .p {
+  color: var(--co-pink);
+}
+section.codeoverheid code.push .ok {
+  color: #73d216;
+}
+section.codeoverheid ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: absolute;
+  top: 63%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 32px 0 0;
+  list-style: none;
+  text-align: center;
+}
+section.codeoverheid li {
+  margin: 0;
+  padding: 0 22px;
+  font-size: 0.6em;
+  line-height: 1.4;
+  color: #333;
+  border-right: 1px solid #e0e0e0;
+}
+section.codeoverheid li:last-child {
+  border-right: none;
+}
+section.codeoverheid li strong {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 1.25em;
+  color: var(--co-purple);
+}
+section.codeoverheid li::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 10px;
+  background: no-repeat center / contain;
+}
+section.codeoverheid li:nth-child(1)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 212 212'%3E%3Cg fill='none' stroke-width='15' transform='translate(6 6)'%3E%3Cpath stroke='%23e060a0' stroke-width='25' d='M58 168V70a50 50 0 0 1 50-50h20'/%3E%3Cpath stroke='%2342145f' stroke-width='25' d='M58 168v-30a50 50 0 0 1 50-50h20'/%3E%3Ccircle cx='142' cy='20' r='18' stroke='%23e060a0'/%3E%3Ccircle cx='142' cy='88' r='18' stroke='%2342145f'/%3E%3Ccircle cx='58' cy='180' r='18' stroke='%2342145f'/%3E%3C/g%3E%3C/svg%3E");
+}
+section.codeoverheid li:nth-child(2)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23e060a0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='20' cy='20' r='13'/%3E%3Cpath d='M14 20l5 5 8-8'/%3E%3C/svg%3E");
+}
+section.codeoverheid li:nth-child(3)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23e060a0' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L7 12v14l13 8 13-8V12L20 6z'/%3E%3Cpath d='M20 6v22M7 12l13 8 13-8'/%3E%3C/svg%3E");
+}
+section.codeoverheid li:nth-child(4)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23e060a0' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='20' cy='10' r='4'/%3E%3Ccircle cx='9' cy='29' r='4'/%3E%3Ccircle cx='31' cy='29' r='4'/%3E%3Cpath d='M18 14l-7 11M22 14l7 11M13 29h14'/%3E%3C/svg%3E");
 }
